@@ -280,9 +280,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>title: trytitle<br>date: 2022-01-16 11:40:39</p>
-<p>tags: [“JS”,”学习”]</p>
-<p>categories: [“代码”]</p>
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: 深拷贝浅拷贝</span><br><span class="line"><span class="attr">date</span>: <span class="number">2022</span>-<span class="number">3</span>-<span class="number">10</span></span><br><span class="line"><span class="attr">tags</span>: [<span class="string">&quot;JS&quot;</span>,<span class="string">&quot;学习&quot;</span>]</span><br><span class="line"><span class="attr">categories</span>: [<span class="string">&quot;代码&quot;</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<p>let arr1 = [1,2,3]</p>
+<p>let arr2</p>
+<h4 id="深拷贝："><a href="#深拷贝：" class="headerlink" title="深拷贝："></a>深拷贝：</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>:arr2 = arr1.concat()<span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="number">2</span>:arr2 = arr1.slice()<span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="number">3</span>:arr2 = <span class="built_in">Array</span>.from(arr1)<span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="number">4</span>:arr2 = [...arr1]<span class="string">`</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h5 id="以为是深拷贝，但是在里面放的数组对象的时候其实是浅拷贝"><a href="#以为是深拷贝，但是在里面放的数组对象的时候其实是浅拷贝" class="headerlink" title="以为是深拷贝，但是在里面放的数组对象的时候其实是浅拷贝"></a>以为是深拷贝，但是在里面放的数组对象的时候其实是浅拷贝</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [&#123;<span class="attr">name</span>:<span class="number">22</span>&#125;]<span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="keyword">let</span> arr2 = arr1.concat()<span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span>arr2[<span class="number">0</span>].name = <span class="number">33</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="built_in">console</span>.log(arr1)</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -327,9 +338,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>title: trytitle<br>date: 2022-01-16 11:40:39</p>
-<p>tags: [“JS”,”学习”]</p>
-<p>categories: [“代码”]</p>
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: trytitle</span><br><span class="line">date: 2022-01-16 11:40:39</span><br><span class="line"></span><br><span class="line">tags: [&quot;JS&quot;,&quot;学习&quot;]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">categories: [&quot;代码&quot;]</span><br></pre></td></tr></table></figure>
+
+
+
 <h4 id="是ES6新增的内容，可以在函数调用-数组构造时，将数组表达式或者string在语法层面上展开"><a href="#是ES6新增的内容，可以在函数调用-数组构造时，将数组表达式或者string在语法层面上展开" class="headerlink" title="是ES6新增的内容，可以在函数调用/数组构造时，将数组表达式或者string在语法层面上展开"></a>是ES6新增的内容，可以在函数调用/数组构造时，将数组表达式或者string在语法层面上展开</h4><h4 id="还可以在构造对象时，将对象表达式按照key-value的方式展开"><a href="#还可以在构造对象时，将对象表达式按照key-value的方式展开" class="headerlink" title="还可以在构造对象时，将对象表达式按照key-value的方式展开"></a>还可以在构造对象时，将对象表达式按照key-value的方式展开</h4><h4 id="也就是可以实现，将数组或者对象去掉-的方式展开"><a href="#也就是可以实现，将数组或者对象去掉-的方式展开" class="headerlink" title="也就是可以实现，将数组或者对象去掉[],{}的方式展开"></a>也就是可以实现，将数组或者对象去掉[],{}的方式展开</h4><h5 id="数组的复制"><a href="#数组的复制" class="headerlink" title="数组的复制"></a>数组的复制</h5><p>let arr1 = [1,2,3]</p>
 <p>let arr2 = […arr1]</p>
 <p>这样不会指向一个数组，跟arr1.concat()一样的</p>
