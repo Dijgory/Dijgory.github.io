@@ -17,13 +17,13 @@
 
 <meta name="description" content="垃圾回收：全局变量指定义在函数之外的变量，局部变量指某个函数中定义的变量 局部变量只有在函数执行的过程中存在，这个过程为局部变量在栈或者堆分配相应的空间，函数结束后就释放空间 垃圾回收要知道哪个有用哪个没用 1：标记清除变量进入执行环境的时候，垃圾回收器对其做个标记（进入环境），离开环境时（函数执行结束）标记离开环境，然后释放其内存 2：引用计数在变量申明的时候附一个引用值，值为1，然后其赋予另一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="垃圾回收">
 <meta property="og:url" content="http://example.com/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="垃圾回收：全局变量指定义在函数之外的变量，局部变量指某个函数中定义的变量 局部变量只有在函数执行的过程中存在，这个过程为局部变量在栈或者堆分配相应的空间，函数结束后就释放空间 垃圾回收要知道哪个有用哪个没用 1：标记清除变量进入执行环境的时候，垃圾回收器对其做个标记（进入环境），离开环境时（函数执行结束）标记离开环境，然后释放其内存 2：引用计数在变量申明的时候附一个引用值，值为1，然后其赋予另一">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-12T01:22:02.939Z">
-<meta property="article:modified_time" content="2022-03-12T01:47:18.875Z">
+<meta property="article:modified_time" content="2022-03-15T06:28:43.315Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -59,7 +59,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hexo</title>
+<title>垃圾回收 | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -184,7 +184,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li></ul>
+                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/" rel="tag">JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li></ul>
                     </div>
                 </section>
                 
@@ -274,6 +274,24 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      垃圾回收
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
@@ -291,12 +309,12 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/"></a></p>
+        <p><span>Title:</span><a href="/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">垃圾回收</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage"></a></p>
         <p><span>Created:</span>2022-03-12, 09:22:02</p>
-        <p><span>Updated:</span>2022-03-12, 09:47:18</p>
+        <p><span>Updated:</span>2022-03-15, 14:28:43</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/" title="">http://example.com/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/</a>
+            <span>Full URL:</span><a class="post-url" href="/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/" title="垃圾回收">http://example.com/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/</a>
             <span class="copy-path" data-clipboard-text="From http://example.com/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/　　By " title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -311,14 +329,14 @@
         
             <div id="article-nav-newer" class="article-nav-title">
                 <a href="/2022/03/12/JS_typeof_instanceof/">
-                    
+                    JS_instanceof
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
                 <a href="/2022/03/11/JS_setTimeout/">
-                    
+                    JS_setTimeout
                 </a>
             </div>
         
@@ -366,7 +384,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"垃圾回收　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -386,7 +404,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2022/03/12/JS_typeof_instanceof/" title="Pre: ">
+            <a href="/2022/03/12/JS_typeof_instanceof/" title="Pre: JS_instanceof">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -394,13 +412,13 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2022/03/11/JS_setTimeout/" title="Next: ">
+            <a href="/2022/03/11/JS_setTimeout/" title="Next: JS_setTimeout">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/03/12/JS_%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C%E5%90%88%E9%9B%86/">JS_数组操作合集</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/12/JS_typeof_instanceof/">JS_typeof_instanceof</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">JS_垃圾回收机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/11/JS_setTimeout/">JS_setTimeout</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/10/JS_cookie%E7%AD%89%E5%8F%B7%E5%92%8C%E5%8A%A0%E5%8F%B7/">JS_cookie等号和加号</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/10/JS_%E6%B7%B1%E6%8B%B7%E8%B4%9D%E6%B5%85%E6%8B%B7%E8%B4%9D/">JS_深拷贝浅拷贝</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/10/JS_%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/">JS_拓展运算符</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/09/CSS_%E5%B1%85%E4%B8%AD/">CSS_居中</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">我的第一篇文章</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/16/trytitle/">trytitle</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/14/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/03/14/VUE_%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82/">VUE_组件传参</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/13/CSS_flex/">CSS_flex</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/13/CSS_position/">CSS_position</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/13/JS_%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1/">JS_原型对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/13/JS_%E9%80%92%E5%BD%92/">JS_递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/12/JS_%E9%97%AD%E5%8C%85/">JS_闭包</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/12/JS_%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C%E5%90%88%E9%9B%86/">JS_数组操作合集</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/12/JS_typeof_instanceof/">JS_instanceof</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">垃圾回收</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/11/JS_setTimeout/">JS_setTimeout</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/10/JS_cookie%E7%AD%89%E5%8F%B7%E5%92%8C%E5%8A%A0%E5%8F%B7/">JS_cookie等号和加号</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/10/JS_%E6%B7%B1%E6%8B%B7%E8%B4%9D%E6%B5%85%E6%8B%B7%E8%B4%9D/">深拷贝浅拷贝</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/09/CSS_%E5%B1%85%E4%B8%AD/">css居中</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">我的第一篇文章</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/16/JS_%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/">trytitle</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/16/trytitle/">trytitle</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/14/hello-world/">Hello World</a></li></ul>
 
 
 

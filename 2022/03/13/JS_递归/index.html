@@ -15,17 +15,19 @@
 
 
 
-<meta name="description" content="setInterval（function,time）就是无限调用函数实现方法123456789101112131415161718192021function newInterval(fun,time)&amp;#123; function inside()&amp;#123;  fun()  setTimeout(inside,time) &amp;#125; setTimeout(inside,time)&amp;#125;">
+<meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&#x2F;*一个节点一个小时分裂一次（分裂出一个新节点），三小时后小时，问n小时后有多少个节点分析：0 -&gt; 0 || 11 -&gt; 0 || 22 -&gt; 0*&#x2F;function">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS_setTimeout">
-<meta property="og:url" content="http://example.com/2022/03/11/JS_setTimeout/index.html">
+<meta property="og:title" content="JS_递归">
+<meta property="og:url" content="http://example.com/2022/03/13/JS_%E9%80%92%E5%BD%92/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="setInterval（function,time）就是无限调用函数实现方法123456789101112131415161718192021function newInterval(fun,time)&amp;#123; function inside()&amp;#123;  fun()  setTimeout(inside,time) &amp;#125; setTimeout(inside,time)&amp;#125;">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&#x2F;*一个节点一个小时分裂一次（分裂出一个新节点），三小时后小时，问n小时后有多少个节点分析：0 -&gt; 0 || 11 -&gt; 0 || 22 -&gt; 0*&#x2F;function">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-03-11T13:31:35.430Z">
-<meta property="article:modified_time" content="2022-03-15T06:34:56.372Z">
+<meta property="og:image" content="c:/Users/DELL/AppData/Roaming/Typora/typora-user-images/image-20220313094328247.png">
+<meta property="article:published_time" content="2022-03-13T01:43:07.543Z">
+<meta property="article:modified_time" content="2022-03-15T06:31:17.208Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/DELL/AppData/Roaming/Typora/typora-user-images/image-20220313094328247.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -59,7 +61,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>JS_setTimeout | Hexo</title>
+<title>JS_递归 | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -259,11 +261,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-JS_setTimeout" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JS_递归" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/03/11/JS_setTimeout/" class="article-date">
-      <time datetime="2022-03-11T13:31:35.430Z" itemprop="datePublished">2022-03-11</time>
+      <a href="/2022/03/13/JS_%E9%80%92%E5%BD%92/" class="article-date">
+      <time datetime="2022-03-13T01:43:07.543Z" itemprop="datePublished">2022-03-13</time>
 </a>
 
 
@@ -278,7 +280,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JS_setTimeout
+      JS_递归
     </h1>
   
 
@@ -295,7 +297,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="setInterval（function-time）就是无限调用函数"><a href="#setInterval（function-time）就是无限调用函数" class="headerlink" title="setInterval（function,time）就是无限调用函数"></a>setInterval（function,time）就是无限调用函数</h3><h4 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">newInterval</span>(<span class="params">fun,time</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">inside</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">  fun()</span><br><span class="line"></span><br><span class="line">  <span class="built_in">setTimeout</span>(inside,time)</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">setTimeout</span>(inside,time)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">like</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">&quot;调用&quot;</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">newInterval(like,<span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
+        <hr>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220313094328247.png" alt="image-20220313094328247"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">一个节点一个小时分裂一次（分裂出一个新节点），三小时后小时，问n小时后有多少个节点</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">分析：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">0 -&gt; 0 || 1</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">1 -&gt; 0 || 2</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">2 -&gt; 0</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">total</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">f0</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(n === <span class="number">0</span>) &#123;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> f0(n - <span class="number">1</span>) + f1(n - <span class="number">1</span>) + f2(n - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(n === <span class="number">0</span>) &#123;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> f0(n -<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(n === <span class="number">0</span> || n === <span class="number">1</span>) &#123;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> f1(n - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">return</span> f0(n) + f1(n) + f2(n)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(total(<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
 
 
       
@@ -305,13 +309,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2022/03/11/JS_setTimeout/">JS_setTimeout</a></p>
+        <p><span>Title:</span><a href="/2022/03/13/JS_%E9%80%92%E5%BD%92/">JS_递归</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage"></a></p>
-        <p><span>Created:</span>2022-03-11, 21:31:35</p>
-        <p><span>Updated:</span>2022-03-15, 14:34:56</p>
+        <p><span>Created:</span>2022-03-13, 09:43:07</p>
+        <p><span>Updated:</span>2022-03-15, 14:31:17</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2022/03/11/JS_setTimeout/" title="JS_setTimeout">http://example.com/2022/03/11/JS_setTimeout/</a>
-            <span class="copy-path" data-clipboard-text="From http://example.com/2022/03/11/JS_setTimeout/　　By " title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2022/03/13/JS_%E9%80%92%E5%BD%92/" title="JS_递归">http://example.com/2022/03/13/JS_%E9%80%92%E5%BD%92/</a>
+            <span class="copy-path" data-clipboard-text="From http://example.com/2022/03/13/JS_%E9%80%92%E5%BD%92/　　By " title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -324,14 +328,14 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">
-                    垃圾回收
+                <a href="/2022/03/13/JS_%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1/">
+                    JS_原型对象
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2022/03/10/JS_cookie%E7%AD%89%E5%8F%B7%E5%92%8C%E5%8A%A0%E5%8F%B7/">
+                <a href="/2022/03/12/JS_%E9%97%AD%E5%8C%85/">
                     
                 </a>
             </div>
@@ -344,7 +348,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#setInterval%EF%BC%88function-time%EF%BC%89%E5%B0%B1%E6%98%AF%E6%97%A0%E9%99%90%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">setInterval（function,time）就是无限调用函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">实现方法</span></a></li></ol></li></ol>
+            
         
     </div>
     <style>
@@ -380,7 +384,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"JS_setTimeout　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"JS_递归　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -400,7 +404,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/" title="Pre: 垃圾回收">
+            <a href="/2022/03/13/JS_%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1/" title="Pre: JS_原型对象">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -408,7 +412,7 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2022/03/10/JS_cookie%E7%AD%89%E5%8F%B7%E5%92%8C%E5%8A%A0%E5%8F%B7/" title="Next: ">
+            <a href="/2022/03/12/JS_%E9%97%AD%E5%8C%85/" title="Next: ">
                 <i class="fa fa-angle-right"></i>
             </a>
         

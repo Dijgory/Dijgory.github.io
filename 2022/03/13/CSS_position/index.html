@@ -15,17 +15,19 @@
 
 
 
-<meta name="description" content="setInterval（function,time）就是无限调用函数实现方法123456789101112131415161718192021function newInterval(fun,time)&amp;#123; function inside()&amp;#123;  fun()  setTimeout(inside,time) &amp;#125; setTimeout(inside,time)&amp;#125;">
+<meta name="description" content="1:相对定位    position:relative相对于元素在浏览器默认位置的定位，偏移都是相对于它本身的位置 2:绝对定位  position:absolute相对于父元素（定义有position的父元素，position:relative ,  position:absolute,position:fiex这些都可以）定位，若父元素没有position那么就相对于浏览器窗口定位 3:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS_setTimeout">
-<meta property="og:url" content="http://example.com/2022/03/11/JS_setTimeout/index.html">
+<meta property="og:title" content="CSS_position">
+<meta property="og:url" content="http://example.com/2022/03/13/CSS_position/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="setInterval（function,time）就是无限调用函数实现方法123456789101112131415161718192021function newInterval(fun,time)&amp;#123; function inside()&amp;#123;  fun()  setTimeout(inside,time) &amp;#125; setTimeout(inside,time)&amp;#125;">
+<meta property="og:description" content="1:相对定位    position:relative相对于元素在浏览器默认位置的定位，偏移都是相对于它本身的位置 2:绝对定位  position:absolute相对于父元素（定义有position的父元素，position:relative ,  position:absolute,position:fiex这些都可以）定位，若父元素没有position那么就相对于浏览器窗口定位 3:">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-03-11T13:31:35.430Z">
-<meta property="article:modified_time" content="2022-03-15T06:34:56.372Z">
+<meta property="og:image" content="c:/Users/DELL/AppData/Roaming/Typora/typora-user-images/image-20220313163833103.png">
+<meta property="article:published_time" content="2022-03-13T08:09:44.404Z">
+<meta property="article:modified_time" content="2022-03-15T06:31:38.870Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/DELL/AppData/Roaming/Typora/typora-user-images/image-20220313163833103.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -59,7 +61,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>JS_setTimeout | Hexo</title>
+<title>CSS_position | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -259,11 +261,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-JS_setTimeout" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-CSS_position" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/03/11/JS_setTimeout/" class="article-date">
-      <time datetime="2022-03-11T13:31:35.430Z" itemprop="datePublished">2022-03-11</time>
+      <a href="/2022/03/13/CSS_position/" class="article-date">
+      <time datetime="2022-03-13T08:09:44.404Z" itemprop="datePublished">2022-03-13</time>
 </a>
 
 
@@ -278,7 +280,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JS_setTimeout
+      CSS_position
     </h1>
   
 
@@ -295,8 +297,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="setInterval（function-time）就是无限调用函数"><a href="#setInterval（function-time）就是无限调用函数" class="headerlink" title="setInterval（function,time）就是无限调用函数"></a>setInterval（function,time）就是无限调用函数</h3><h4 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">newInterval</span>(<span class="params">fun,time</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">inside</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">  fun()</span><br><span class="line"></span><br><span class="line">  <span class="built_in">setTimeout</span>(inside,time)</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">setTimeout</span>(inside,time)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">like</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">&quot;调用&quot;</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">newInterval(like,<span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
+        <h3 id="1-相对定位-position-relative"><a href="#1-相对定位-position-relative" class="headerlink" title="1:相对定位    position:relative"></a>1:相对定位    position:relative</h3><p>相对于元素在浏览器默认位置的定位，偏移都是相对于它本身的位置</p>
+<h3 id="2-绝对定位-position-absolute"><a href="#2-绝对定位-position-absolute" class="headerlink" title="2:绝对定位  position:absolute"></a>2:绝对定位  position:absolute</h3><p>相对于父元素（<strong>定义有position的父元素</strong>，position:relative ,  position:absolute,position:fiex这些都可以）定位，若父元素没有position那么就相对于浏览器窗口定位</p>
+<h3 id="3-z-index定义层序的，大的显示在上面，其中比较的两个属性都要有position属性"><a href="#3-z-index定义层序的，大的显示在上面，其中比较的两个属性都要有position属性" class="headerlink" title="3:    z-index定义层序的，大的显示在上面，其中比较的两个属性都要有position属性"></a>3:    z-index定义层序的，大的显示在上面，其中比较的两个属性都要有position属性</h3><h3 id="4：position：fixed-在固定的位置不变（与z-index连用）特别在窗口滑动的时候"><a href="#4：position：fixed-在固定的位置不变（与z-index连用）特别在窗口滑动的时候" class="headerlink" title="4：position：fixed  在固定的位置不变（与z-index连用）特别在窗口滑动的时候"></a>4：position：fixed  在固定的位置不变（与z-index连用）特别在窗口滑动的时候</h3><h3 id="5：position：sticky"><a href="#5：position：sticky" class="headerlink" title="5：position：sticky"></a>5：position：sticky</h3><p>一般</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">top</span>:<span class="number">10px</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">position</span>:sticky;</span><br></pre></td></tr></table></figure>
 
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220313163833103.png" alt="image-20220313163833103"></p>
 
       
     </div>
@@ -305,13 +311,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2022/03/11/JS_setTimeout/">JS_setTimeout</a></p>
+        <p><span>Title:</span><a href="/2022/03/13/CSS_position/">CSS_position</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage"></a></p>
-        <p><span>Created:</span>2022-03-11, 21:31:35</p>
-        <p><span>Updated:</span>2022-03-15, 14:34:56</p>
+        <p><span>Created:</span>2022-03-13, 16:09:44</p>
+        <p><span>Updated:</span>2022-03-15, 14:31:38</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2022/03/11/JS_setTimeout/" title="JS_setTimeout">http://example.com/2022/03/11/JS_setTimeout/</a>
-            <span class="copy-path" data-clipboard-text="From http://example.com/2022/03/11/JS_setTimeout/　　By " title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2022/03/13/CSS_position/" title="CSS_position">http://example.com/2022/03/13/CSS_position/</a>
+            <span class="copy-path" data-clipboard-text="From http://example.com/2022/03/13/CSS_position/　　By " title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -324,15 +330,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">
-                    垃圾回收
+                <a href="/2022/03/13/CSS_flex/">
+                    CSS_flex
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2022/03/10/JS_cookie%E7%AD%89%E5%8F%B7%E5%92%8C%E5%8A%A0%E5%8F%B7/">
-                    
+                <a href="/2022/03/13/JS_%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1/">
+                    JS_原型对象
                 </a>
             </div>
         
@@ -344,7 +350,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#setInterval%EF%BC%88function-time%EF%BC%89%E5%B0%B1%E6%98%AF%E6%97%A0%E9%99%90%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">setInterval（function,time）就是无限调用函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">实现方法</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D-position-relative"><span class="toc-number">1.</span> <span class="toc-text">1:相对定位    position:relative</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D-position-absolute"><span class="toc-number">2.</span> <span class="toc-text">2:绝对定位  position:absolute</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-z-index%E5%AE%9A%E4%B9%89%E5%B1%82%E5%BA%8F%E7%9A%84%EF%BC%8C%E5%A4%A7%E7%9A%84%E6%98%BE%E7%A4%BA%E5%9C%A8%E4%B8%8A%E9%9D%A2%EF%BC%8C%E5%85%B6%E4%B8%AD%E6%AF%94%E8%BE%83%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%B1%9E%E6%80%A7%E9%83%BD%E8%A6%81%E6%9C%89position%E5%B1%9E%E6%80%A7"><span class="toc-number">3.</span> <span class="toc-text">3:    z-index定义层序的，大的显示在上面，其中比较的两个属性都要有position属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%EF%BC%9Aposition%EF%BC%9Afixed-%E5%9C%A8%E5%9B%BA%E5%AE%9A%E7%9A%84%E4%BD%8D%E7%BD%AE%E4%B8%8D%E5%8F%98%EF%BC%88%E4%B8%8Ez-index%E8%BF%9E%E7%94%A8%EF%BC%89%E7%89%B9%E5%88%AB%E5%9C%A8%E7%AA%97%E5%8F%A3%E6%BB%91%E5%8A%A8%E7%9A%84%E6%97%B6%E5%80%99"><span class="toc-number">4.</span> <span class="toc-text">4：position：fixed  在固定的位置不变（与z-index连用）特别在窗口滑动的时候</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%EF%BC%9Aposition%EF%BC%9Asticky"><span class="toc-number">5.</span> <span class="toc-text">5：position：sticky</span></a></li></ol>
         
     </div>
     <style>
@@ -380,7 +386,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"JS_setTimeout　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"CSS_position　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -400,7 +406,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2022/03/12/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/" title="Pre: 垃圾回收">
+            <a href="/2022/03/13/CSS_flex/" title="Pre: CSS_flex">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -408,7 +414,7 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2022/03/10/JS_cookie%E7%AD%89%E5%8F%B7%E5%92%8C%E5%8A%A0%E5%8F%B7/" title="Next: ">
+            <a href="/2022/03/13/JS_%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1/" title="Next: JS_原型对象">
                 <i class="fa fa-angle-right"></i>
             </a>
         
