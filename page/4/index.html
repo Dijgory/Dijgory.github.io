@@ -262,6 +262,75 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-JS_垃圾回收机制" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/14/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/" class="article-date">
+      <time datetime="2022-03-13T16:00:00.000Z" itemprop="datePublished">2022-03-14</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/14/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">垃圾回收</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="垃圾回收："><a href="#垃圾回收：" class="headerlink" title="垃圾回收："></a>垃圾回收：</h3><p>全局变量指定义在函数之外的变量，局部变量指某个函数中定义的变量</p>
+<p>局部变量只有在函数执行的过程中存在，这个过程为局部变量在栈或者堆分配相应的空间，函数结束后就释放空间</p>
+<p>垃圾回收要知道哪个有用哪个没用</p>
+<h4 id="1：标记清除"><a href="#1：标记清除" class="headerlink" title="1：标记清除"></a>1：标记清除</h4><p>变量进入执行环境的时候，垃圾回收器对其做个标记（进入环境），离开环境时（函数执行结束）标记离开环境，然后释放其内存</p>
+<h4 id="2：引用计数"><a href="#2：引用计数" class="headerlink" title="2：引用计数"></a>2：引用计数</h4><p>在变量申明的时候附一个引用值，值为1，然后其赋予另一个变量的时候，引用值加一，保存该引用值的变量被另一个变量覆盖时引用值减一，到0的时候垃圾回收该变量的内存</p>
+<p>缺点：循环引用不能解决</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-JS_原型对象" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -327,75 +396,6 @@
 <h4 id="上面的原型分别为-String-prototype-Number-prototype-Object-prototype前两个的-proto-为Object-prototype"><a href="#上面的原型分别为-String-prototype-Number-prototype-Object-prototype前两个的-proto-为Object-prototype" class="headerlink" title="上面的原型分别为:String.prototype       ,     Number.prototype,         Object.prototype前两个的.__proto__为Object.prototype"></a>上面的原型分别为:String.prototype       ,     Number.prototype,         Object.prototype前两个的.__proto__为Object.prototype</h4><h3 id="最后一个Object-prototype-proto-为null"><a href="#最后一个Object-prototype-proto-为null" class="headerlink" title="最后一个Object.prototype.__proto__为null"></a>最后一个Object.prototype.__proto__为null</h3><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220313103519262.png" alt="image-20220313103519262"></p>
 <h5 id="原型对象的constructor属性可以看见创建a-b-c的对象"><a href="#原型对象的constructor属性可以看见创建a-b-c的对象" class="headerlink" title="原型对象的constructor属性可以看见创建a ,b ,c的对象"></a>原型对象的constructor属性可以看见创建a ,b ,c的对象</h5><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220313103654963.png" alt="image-20220313103654963"></p>
 <p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220313104415276.png" alt="image-20220313104415276"></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-JS_垃圾回收机制" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2022/03/14/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/" class="article-date">
-      <time datetime="2022-03-13T16:00:00.000Z" itemprop="datePublished">2022-03-14</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/14/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">垃圾回收</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="垃圾回收："><a href="#垃圾回收：" class="headerlink" title="垃圾回收："></a>垃圾回收：</h3><p>全局变量指定义在函数之外的变量，局部变量指某个函数中定义的变量</p>
-<p>局部变量只有在函数执行的过程中存在，这个过程为局部变量在栈或者堆分配相应的空间，函数结束后就释放空间</p>
-<p>垃圾回收要知道哪个有用哪个没用</p>
-<h4 id="1：标记清除"><a href="#1：标记清除" class="headerlink" title="1：标记清除"></a>1：标记清除</h4><p>变量进入执行环境的时候，垃圾回收器对其做个标记（进入环境），离开环境时（函数执行结束）标记离开环境，然后释放其内存</p>
-<h4 id="2：引用计数"><a href="#2：引用计数" class="headerlink" title="2：引用计数"></a>2：引用计数</h4><p>在变量申明的时候附一个引用值，值为1，然后其赋予另一个变量的时候，引用值加一，保存该引用值的变量被另一个变量覆盖时引用值减一，到0的时候垃圾回收该变量的内存</p>
-<p>缺点：循环引用不能解决</p>
 
       
     </div>
@@ -497,75 +497,6 @@
 
 
   
-    <article id="post-CSS_position" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2022/03/12/CSS_position/" class="article-date">
-      <time datetime="2022-03-11T16:00:00.000Z" itemprop="datePublished">2022-03-12</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/12/CSS_position/">CSS_position</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="1-相对定位-position-relative"><a href="#1-相对定位-position-relative" class="headerlink" title="1:相对定位    position:relative"></a>1:相对定位    position:relative</h3><p>相对于元素在浏览器默认位置的定位，偏移都是相对于它本身的位置</p>
-<h3 id="2-绝对定位-position-absolute"><a href="#2-绝对定位-position-absolute" class="headerlink" title="2:绝对定位  position:absolute"></a>2:绝对定位  position:absolute</h3><p>相对于父元素（<strong>定义有position的父元素</strong>，position:relative ,  position:absolute,position:fiex这些都可以）定位，若父元素没有position那么就相对于浏览器窗口定位</p>
-<h3 id="3-z-index定义层序的，大的显示在上面，其中比较的两个属性都要有position属性"><a href="#3-z-index定义层序的，大的显示在上面，其中比较的两个属性都要有position属性" class="headerlink" title="3:    z-index定义层序的，大的显示在上面，其中比较的两个属性都要有position属性"></a>3:    z-index定义层序的，大的显示在上面，其中比较的两个属性都要有position属性</h3><h3 id="4：position：fixed-在固定的位置不变（与z-index连用）特别在窗口滑动的时候"><a href="#4：position：fixed-在固定的位置不变（与z-index连用）特别在窗口滑动的时候" class="headerlink" title="4：position：fixed  在固定的位置不变（与z-index连用）特别在窗口滑动的时候"></a>4：position：fixed  在固定的位置不变（与z-index连用）特别在窗口滑动的时候</h3><h3 id="5：position：sticky"><a href="#5：position：sticky" class="headerlink" title="5：position：sticky"></a>5：position：sticky</h3><p>一般</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">top</span>:<span class="number">10px</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">position</span>:sticky;</span><br></pre></td></tr></table></figure>
-
-<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220313163833103.png" alt="image-20220313163833103"></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-CSS_flex" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -620,6 +551,75 @@
 <h4 id="flex：1"><a href="#flex：1" class="headerlink" title="flex：1"></a>flex：1</h4><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220313165952237.png" alt="image-20220313165952237"></p>
 <p>等比例来分</p>
 <p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220313170008149.png" alt="image-20220313170008149"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-CSS_position" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/12/CSS_position/" class="article-date">
+      <time datetime="2022-03-11T16:00:00.000Z" itemprop="datePublished">2022-03-12</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/12/CSS_position/">CSS_position</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="1-相对定位-position-relative"><a href="#1-相对定位-position-relative" class="headerlink" title="1:相对定位    position:relative"></a>1:相对定位    position:relative</h3><p>相对于元素在浏览器默认位置的定位，偏移都是相对于它本身的位置</p>
+<h3 id="2-绝对定位-position-absolute"><a href="#2-绝对定位-position-absolute" class="headerlink" title="2:绝对定位  position:absolute"></a>2:绝对定位  position:absolute</h3><p>相对于父元素（<strong>定义有position的父元素</strong>，position:relative ,  position:absolute,position:fiex这些都可以）定位，若父元素没有position那么就相对于浏览器窗口定位</p>
+<h3 id="3-z-index定义层序的，大的显示在上面，其中比较的两个属性都要有position属性"><a href="#3-z-index定义层序的，大的显示在上面，其中比较的两个属性都要有position属性" class="headerlink" title="3:    z-index定义层序的，大的显示在上面，其中比较的两个属性都要有position属性"></a>3:    z-index定义层序的，大的显示在上面，其中比较的两个属性都要有position属性</h3><h3 id="4：position：fixed-在固定的位置不变（与z-index连用）特别在窗口滑动的时候"><a href="#4：position：fixed-在固定的位置不变（与z-index连用）特别在窗口滑动的时候" class="headerlink" title="4：position：fixed  在固定的位置不变（与z-index连用）特别在窗口滑动的时候"></a>4：position：fixed  在固定的位置不变（与z-index连用）特别在窗口滑动的时候</h3><h3 id="5：position：sticky"><a href="#5：position：sticky" class="headerlink" title="5：position：sticky"></a>5：position：sticky</h3><p>一般</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">top</span>:<span class="number">10px</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">position</span>:sticky;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220313163833103.png" alt="image-20220313163833103"></p>
 
       
     </div>
@@ -730,71 +730,6 @@
 
 
   
-    <article id="post-JS_setTimeout" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2022/03/12/JS_setTimeout/" class="article-date">
-      <time datetime="2022-03-11T16:00:00.000Z" itemprop="datePublished">2022-03-12</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/12/JS_setTimeout/">JS_setTimeout</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="setInterval（function-time）就是无限调用函数"><a href="#setInterval（function-time）就是无限调用函数" class="headerlink" title="setInterval（function,time）就是无限调用函数"></a>setInterval（function,time）就是无限调用函数</h3><h4 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">newInterval</span>(<span class="params">fun,time</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">inside</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">  fun()</span><br><span class="line"></span><br><span class="line">  <span class="built_in">setTimeout</span>(inside,time)</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">setTimeout</span>(inside,time)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">like</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">&quot;调用&quot;</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">newInterval(like,<span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-JS_typeof_instanceof" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -843,6 +778,71 @@
 <h5 id="但左边的操作数要为引用类型值，或者为实例，右边一定要是函数"><a href="#但左边的操作数要为引用类型值，或者为实例，右边一定要是函数" class="headerlink" title="但左边的操作数要为引用类型值，或者为实例，右边一定要是函数"></a>但左边的操作数要为引用类型值，或者为实例，右边一定要是函数</h5><p>888 instanceof Number            为false</p>
 <p>[1,2] instanceof Array                为true</p>
 <p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220312140438218.png" alt="image-20220312140438218"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS_setTimeout" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/12/JS_setTimeout/" class="article-date">
+      <time datetime="2022-03-11T16:00:00.000Z" itemprop="datePublished">2022-03-12</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/12/JS_setTimeout/">JS_setTimeout</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="setInterval（function-time）就是无限调用函数"><a href="#setInterval（function-time）就是无限调用函数" class="headerlink" title="setInterval（function,time）就是无限调用函数"></a>setInterval（function,time）就是无限调用函数</h3><h4 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">newInterval</span>(<span class="params">fun,time</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">inside</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">  fun()</span><br><span class="line"></span><br><span class="line">  <span class="built_in">setTimeout</span>(inside,time)</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">setTimeout</span>(inside,time)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">like</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">&quot;调用&quot;</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">newInterval(like,<span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
