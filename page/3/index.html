@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="John Doe" />
+
+
+    
+    
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+    <style> .article { opacity: 0;} </style>
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Hexo</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: true,
+        isPost: false,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: 
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/head.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/"></a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menu</li>
+                        <li>Tags</li>
+                        
+                        <li>Friends</li>
+                        
+                        
+                        <li>About Me</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="/2684047674@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" rel="noopener" href="https://github.com/Dijgory" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/" rel="tag">JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/" rel="tag">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页"></a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/head.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页"></a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="/2684047674@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/Dijgory" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-CSS_实现三角形" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/21/CSS_%E5%AE%9E%E7%8E%B0%E4%B8%89%E8%A7%92%E5%BD%A2/" class="article-date">
+      <time datetime="2022-03-21T05:55:51.351Z" itemprop="datePublished">2022-03-21</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/21/CSS_%E5%AE%9E%E7%8E%B0%E4%B8%89%E8%A7%92%E5%BD%A2/">CSS_实现三角形</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220321135624051.png" alt="image-20220321135624051"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220321135649962.png" alt="image-20220321135649962"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220321135723836.png" alt="image-20220321135723836"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220321135807835.png" alt="image-20220321135807835"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-HTTP_强制缓存与协商缓存" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/21/HTTP_%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E4%B8%8E%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98/" class="article-date">
+      <time datetime="2022-03-21T05:32:59.048Z" itemprop="datePublished">2022-03-21</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/21/HTTP_%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E4%B8%8E%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98/">HTTP_强制缓存与协商缓存</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><strong>http缓存的分类：</strong><br>根据是否需要重新向服务器发起请求来分类，可分为(强制缓存，协商缓存) 根据是否可以被单个或者多个用户使用来分类，可分为(私有缓存，共享缓存) 强制缓存如果生效，不需要再和服务器发生交互，而协商缓存不管是否生效，都需要与服务端发生交互。下面是强制缓存和协商缓存的一些对比：</p>
+<p><img src="https://uploadfiles.nowcoder.com/images/20220301/4107856_1646127193746/1C5E2CF0558D8ACC1C28ED9BF9435488" alt="img"><br><strong>1.1、强制缓存</strong><br>强制缓存在缓存数据未失效的情况下（即Cache-Control的max-age没有过期或者Expires的缓存时间没有过期），那么就会直接使用浏览器的缓存数据，不会再向服务器发送任何请求。强制缓存生效时，http状态码为200。这种方式页面的加载速度是最快的，性能也是很好的，但是在这期间，如果服务器端的资源修改了，页面上是拿不到的，因为它不会再向服务器发请求了。这种情况就是我们在开发种经常遇到的，比如你修改了页面上的某个样式，在页面上刷新了但没有生效，因为走的是强缓存，所以Ctrl + F5一顿操作之后就好了。 跟强制缓存相关的header头属性有（Pragma/Cache-Control/Expires）， Pragma和Cache-control共存时，Pragma的优先级是比Cache-Control高的。</p>
+<p><strong>1.2、协商缓存</strong><br>当第一次请求时服务器返回的响应头中没有Cache-Control和Expires或者Cache-Control和Expires过期还或者它的属性设置为no-cache时(即不走强缓存)，那么浏览器第二次请求时就会与服务器进行协商，与服务器端对比判断资源是否进行了修改更新。如果服务器端的资源没有修改，那么就会返回304状态码，告诉浏览器可以使用缓存中的数据，这样就减少了服务器的数据传输压力。如果数据有更新就会返回200状态码，服务器就会返回更新后的资源并且将缓存信息一起返回。跟协商缓存相关的header头属性有（ETag/If-Not-Match 、Last-Modified/If-Modified-Since）请求头和响应头需要成对出现</p>
+<p><strong>1.3、私有缓存（浏览器级缓存）</strong><br>私有缓存只能用于单独的用户：Cache-Control: Private</p>
+<p><strong>1.4、共享缓存（代理级缓存）</strong><br>共享缓存可以被多个用户使用: Cache-Control: Public</p>
+<h4 id="5-26-协商缓存原理，谁跟谁协商，如何协商？"><a href="#5-26-协商缓存原理，谁跟谁协商，如何协商？" class="headerlink" title="5.26 协商缓存原理，谁跟谁协商，如何协商？"></a>5.26 协商缓存原理，谁跟谁协商，如何协商？</h4><p><strong>参考答案</strong>：</p>
+<p>协商缓存: 向服务器发送请求，服务器会根据这个请求的request header的一些参数来判断是否命中协商缓存，如果命中，则返回304状态码并带上新的response header通知浏览器从缓存中读取资源；</p>
+<p>服务器和请求协商，根据请求头携带的参数进行协商</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS_防抖节流" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/18/JS_%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/" class="article-date">
+      <time datetime="2022-03-18T09:05:46.625Z" itemprop="datePublished">2022-03-18</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/18/JS_%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/">JS_防抖节流</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="防抖："><a href="#防抖：" class="headerlink" title="防抖："></a>防抖：</h3><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220318170724938.png" alt="image-20220318170724938"></p>
+<h3 id="节流："><a href="#节流：" class="headerlink" title="节流："></a>节流：</h3><h4 id="1："><a href="#1：" class="headerlink" title="1："></a>1：</h4><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220318182513144.png" alt="image-20220318182513144" style="zoom:150%;" />
+
+<h4 id="2："><a href="#2：" class="headerlink" title="2："></a>2：</h4><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220318182429529.png" alt="image-20220318182429529"></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=&lt;device-width&gt;, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;btn&quot;</span>&gt;</span>防抖（一直点的话要在最后一次点后一秒才得执行）<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;fd&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;btn1&quot;</span>&gt;</span>节流(一直点的话还是要在一秒后执行)<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;jl&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> num1 = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> num2 = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> button = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;btn&#x27;</span>);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> button1 = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;btn1&#x27;</span>);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> fd = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;fd&#x27;</span>);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> jl = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;jl&#x27;</span>);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">payMoney</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">   fd.innerHTML = ++<span class="built_in">window</span>.num1;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">   <span class="built_in">console</span>.log(<span class="string">&quot;防抖&quot;</span>)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">debunce</span>(<span class="params">func,dely</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">   <span class="comment">//return func()           //问题一：直接这样会直接输出，所以要设置高阶函数</span></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="comment">/*    return ()=&gt;&#123;</span></span></span><br><span class="line"><span class="comment"><span class="javascript"></span></span></span><br><span class="line"><span class="comment"><span class="javascript">​    setTimeout(()=&gt;&#123;          //问题二：点多少下就会输出多少下</span></span></span><br><span class="line"><span class="comment"><span class="javascript"></span></span></span><br><span class="line"><span class="comment"><span class="javascript">​     func()</span></span></span><br><span class="line"><span class="comment"><span class="javascript"></span></span></span><br><span class="line"><span class="comment"><span class="javascript">​    &#125;,dely)</span></span></span><br><span class="line"><span class="comment"><span class="javascript"></span></span></span><br><span class="line"><span class="comment"><span class="javascript">   &#125;</span></span></span><br><span class="line"><span class="comment"><span class="javascript"></span></span></span><br><span class="line"><span class="comment"><span class="javascript">*/</span>    </span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​    <span class="keyword">let</span> timer;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;            <span class="comment">//此时的处理函数中的this变成了window，本来该指向button的，所以要进行处理一下                        //这里也不能用箭头函数，不然一直指向window</span></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​     <span class="built_in">clearTimeout</span>(timer)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​     <span class="keyword">let</span> content = <span class="built_in">this</span>;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​     timer = <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​      func.apply(content,<span class="built_in">arguments</span>)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​     &#125;,dely)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​    &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  </span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="comment">//+++++++++++++++++++节流+++++++++++++++++++++++=</span></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">jliu</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">   jl.innerHTML = ++<span class="built_in">window</span>.num2;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">   <span class="built_in">console</span>.log(<span class="string">&quot;节流&quot;</span>)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">de</span>(<span class="params">func,dely</span>)</span>&#123;  </span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​    <span class="keyword">let</span> timer;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​     <span class="keyword">let</span> content = <span class="built_in">this</span>;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​     <span class="keyword">if</span>(timer)&#123;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​      <span class="keyword">return</span>;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​     &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​     timer = <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​      func.apply(content,<span class="built_in">arguments</span>);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​      timer = <span class="literal">null</span>;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​     &#125;,dely)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">​    &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  button.addEventListener(<span class="string">&quot;click&quot;</span>,debunce(payMoney,<span class="number">1000</span>))</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  button1.addEventListener(<span class="string">&quot;click&quot;</span>,de(jliu,<span class="number">1000</span>))</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"> </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS_事件循环" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/18/JS_%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" class="article-date">
+      <time datetime="2022-03-18T02:48:13.102Z" itemprop="datePublished">2022-03-18</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/18/JS_%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">JS_事件循环</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>文章地址：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/87684858">https://zhuanlan.zhihu.com/p/87684858</a></p>
+<p>JavaScript 是一门单线程语言</p>
+<p>Javascript 有一个 main thread 主线程和 call-stack 调用栈(执行栈)，所有的任务都会被放到调用栈等待主线程执行</p>
+<h4 id="语言解释："><a href="#语言解释：" class="headerlink" title="语言解释："></a>语言解释：</h4><h5 id="javascript是单线程执行的程序，也就是它只有一条主线，所有的程序都是逐行“排队”执行"><a href="#javascript是单线程执行的程序，也就是它只有一条主线，所有的程序都是逐行“排队”执行" class="headerlink" title="javascript是单线程执行的程序，也就是它只有一条主线，所有的程序都是逐行“排队”执行"></a>javascript是单线程执行的程序，也就是它只有一条主线，所有的程序都是逐行“排队”执行</h5><h5 id="首先是调用栈，先执行同步任务，异步任务先放置到任务队列中，任务队列又分为宏任务（macro-task）和微任务（micro-task），微任务中队列中放置的是-promise-then、aysnc、await-这样操作，宏任务队列中放置的是-setTimeout、ajax、onClick事件，等调用栈的任务执行完成再轮询微任务队列，微任务队列中任务执行完成之后再执行宏任务。"><a href="#首先是调用栈，先执行同步任务，异步任务先放置到任务队列中，任务队列又分为宏任务（macro-task）和微任务（micro-task），微任务中队列中放置的是-promise-then、aysnc、await-这样操作，宏任务队列中放置的是-setTimeout、ajax、onClick事件，等调用栈的任务执行完成再轮询微任务队列，微任务队列中任务执行完成之后再执行宏任务。" class="headerlink" title="首先是调用栈，先执行同步任务，异步任务先放置到任务队列中，任务队列又分为宏任务（macro-task）和微任务（micro-task），微任务中队列中放置的是 promise.then、aysnc、await 这样操作，宏任务队列中放置的是 setTimeout、ajax、onClick事件，等调用栈的任务执行完成再轮询微任务队列，微任务队列中任务执行完成之后再执行宏任务。"></a>首先是调用栈，先执行同步任务，异步任务先放置到任务队列中，任务队列又分为宏任务（macro-task）和微任务（micro-task），微任务中队列中放置的是 promise.then、aysnc、await 这样操作，宏任务队列中放置的是 setTimeout、ajax、onClick事件，等调用栈的任务执行完成再轮询微任务队列，微任务队列中任务执行完成之后再执行宏任务。</h5><ul>
+<li><h5 id="宏任务（macro-task）：一般是-JS-引擎和宿主环境发生通信产生的回调任务，比如-setTimeout，setInterval-是浏览器进行计时的，其中回调函数的执行时间需要浏览器通知到-JS-引擎，网络模块-I-O处理的通信回调也是。包含有-setTimeout，setInterval，DOM事件回调，ajax请求结束后的回调，整体-script-代码，setImmediate。"><a href="#宏任务（macro-task）：一般是-JS-引擎和宿主环境发生通信产生的回调任务，比如-setTimeout，setInterval-是浏览器进行计时的，其中回调函数的执行时间需要浏览器通知到-JS-引擎，网络模块-I-O处理的通信回调也是。包含有-setTimeout，setInterval，DOM事件回调，ajax请求结束后的回调，整体-script-代码，setImmediate。" class="headerlink" title="宏任务（macro-task）：一般是 JS 引擎和宿主环境发生通信产生的回调任务，比如 setTimeout，setInterval 是浏览器进行计时的，其中回调函数的执行时间需要浏览器通知到 JS 引擎，网络模块, I/O处理的通信回调也是。包含有 setTimeout，setInterval，DOM事件回调，ajax请求结束后的回调，整体 script 代码，setImmediate。"></a>宏任务（macro-task）：一般是 JS 引擎和宿主环境发生通信产生的回调任务，比如 setTimeout，setInterval 是浏览器进行计时的，其中回调函数的执行时间需要浏览器通知到 JS 引擎，网络模块, I/O处理的通信回调也是。包含有 setTimeout，setInterval，DOM事件回调，ajax请求结束后的回调，整体 script 代码，setImmediate。</h5></li>
+<li><h5 id="微任务（micro-task）：一般是宏任务在线程中执行时产生的回调，如-Promise，process-nextTick，Object-observe-已废弃-，-MutationObserver（DOM监听），这些都是-JS-引擎自身可以监听到回调。"><a href="#微任务（micro-task）：一般是宏任务在线程中执行时产生的回调，如-Promise，process-nextTick，Object-observe-已废弃-，-MutationObserver（DOM监听），这些都是-JS-引擎自身可以监听到回调。" class="headerlink" title="微任务（micro-task）：一般是宏任务在线程中执行时产生的回调，如 Promise，process.nextTick，Object.observe(已废弃)， MutationObserver（DOM监听），这些都是 JS 引擎自身可以监听到回调。"></a>微任务（micro-task）：一般是宏任务在线程中执行时产生的回调，如 Promise，process.nextTick，Object.observe(已废弃)， MutationObserver（DOM监听），这些都是 JS 引擎自身可以监听到回调。</h5></li>
+</ul>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220318110236188.png" alt="image-20220318110236188"></p>
+<h1 id="js中的同步和异步的区别"><a href="#js中的同步和异步的区别" class="headerlink" title="js中的同步和异步的区别"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lchsirblog/p/12048695.html">js中的同步和异步的区别</a></h1><p><strong>同步和异步的差别就在于这条流水线上各个流程的执行顺序不同</strong>。</p>
+<p><strong>同步任务指的是，在主线程上排队执行的任务，只有前一个任务执行完毕，才能执行后一个任务；<br>异步任务指的是，不进入主线程、而进入”任务队列”（task queue）的任务，只有等主线程任务执行完毕，”任务队列”开始通知主线程，请求执行任务，该任务才会进入主线程执行。</strong></p>
+<h5 id="具体来说，异步运行机制如下："><a href="#具体来说，异步运行机制如下：" class="headerlink" title="具体来说，异步运行机制如下："></a>具体来说，异步运行机制如下：</h5><h5 id="（1）所有同步任务都在主线程上执行，形成一个执行栈（execution-context-stack）。"><a href="#（1）所有同步任务都在主线程上执行，形成一个执行栈（execution-context-stack）。" class="headerlink" title="（1）所有同步任务都在主线程上执行，形成一个执行栈（execution context stack）。"></a>（1）所有同步任务都在主线程上执行，形成一个执行栈（execution context stack）。</h5><h5 id="（2）主线程之外，还存在一个”任务队列”（task-queue）。只要异步任务有了运行结果，就在”任务队列”之中放置一个事件。"><a href="#（2）主线程之外，还存在一个”任务队列”（task-queue）。只要异步任务有了运行结果，就在”任务队列”之中放置一个事件。" class="headerlink" title="（2）主线程之外，还存在一个”任务队列”（task queue）。只要异步任务有了运行结果，就在”任务队列”之中放置一个事件。"></a>（2）主线程之外，还存在一个”任务队列”（task queue）。只要异步任务有了运行结果，就在”任务队列”之中放置一个事件。</h5><h5 id="（3）一旦”执行栈”中的所有同步任务执行完毕，系统就会读取”任务队列”，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。"><a href="#（3）一旦”执行栈”中的所有同步任务执行完毕，系统就会读取”任务队列”，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。" class="headerlink" title="（3）一旦”执行栈”中的所有同步任务执行完毕，系统就会读取”任务队列”，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。"></a>（3）一旦”执行栈”中的所有同步任务执行完毕，系统就会读取”任务队列”，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。</h5><h5 id="（4）主线程不断重复上面的第三步。"><a href="#（4）主线程不断重复上面的第三步。" class="headerlink" title="（4）主线程不断重复上面的第三步。"></a>（4）主线程不断重复上面的第三步。</h5>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-OSI7层模型" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/17/OSI7%E5%B1%82%E6%A8%A1%E5%9E%8B/" class="article-date">
+      <time datetime="2022-03-17T11:19:20.573Z" itemprop="datePublished">2022-03-17</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h4 id="OSI中的层-功能-TCP-IP协议族"><a href="#OSI中的层-功能-TCP-IP协议族" class="headerlink" title="OSI中的层 功能 TCP/IP协议族"></a>OSI中的层 功能 TCP/IP协议族</h4><h4 id="应用层-文件传输，电子邮件，文件服务，虚拟终端-TFTP，HTTP，SNMP，FTP，SMTP，DNS，Telnet"><a href="#应用层-文件传输，电子邮件，文件服务，虚拟终端-TFTP，HTTP，SNMP，FTP，SMTP，DNS，Telnet" class="headerlink" title="应用层 文件传输，电子邮件，文件服务，虚拟终端 TFTP，HTTP，SNMP，FTP，SMTP，DNS，Telnet"></a>应用层 文件传输，电子邮件，文件服务，虚拟终端 TFTP，HTTP，SNMP，FTP，SMTP，DNS，Telnet</h4><h4 id="表示层-数据格式化，代码转换，数据加密-没有协议"><a href="#表示层-数据格式化，代码转换，数据加密-没有协议" class="headerlink" title="表示层 数据格式化，代码转换，数据加密 没有协议"></a>表示层 数据格式化，代码转换，数据加密 没有协议</h4><h4 id="会话层-解除或建立与别的接点的联系-没有协议"><a href="#会话层-解除或建立与别的接点的联系-没有协议" class="headerlink" title="会话层 解除或建立与别的接点的联系 没有协议"></a>会话层 解除或建立与别的接点的联系 没有协议</h4><h4 id="传输层-提供端对端的接口-TCP，UDP"><a href="#传输层-提供端对端的接口-TCP，UDP" class="headerlink" title="传输层 提供端对端的接口 TCP，UDP"></a>传输层 提供端对端的接口 TCP，UDP</h4><h4 id="网络层-为数据包选择路由-IP，ICMP，RIP，OSPF，BGP，IGMP"><a href="#网络层-为数据包选择路由-IP，ICMP，RIP，OSPF，BGP，IGMP" class="headerlink" title="网络层 为数据包选择路由 IP，ICMP，RIP，OSPF，BGP，IGMP"></a>网络层 为数据包选择路由 IP，ICMP，RIP，OSPF，BGP，IGMP</h4><h4 id="数据链路层-传输有地址的帧以及错误检测功能-SLIP，CSLIP，PPP，ARP，RARP，MTU"><a href="#数据链路层-传输有地址的帧以及错误检测功能-SLIP，CSLIP，PPP，ARP，RARP，MTU" class="headerlink" title="数据链路层 传输有地址的帧以及错误检测功能 SLIP，CSLIP，PPP，ARP，RARP，MTU"></a>数据链路层 传输有地址的帧以及错误检测功能 SLIP，CSLIP，PPP，ARP，RARP，MTU</h4><h4 id="物理层-以二进制数据形式在物理媒体上传输数据-ISO2110，IEEE802，IEEE802-2"><a href="#物理层-以二进制数据形式在物理媒体上传输数据-ISO2110，IEEE802，IEEE802-2" class="headerlink" title="物理层 以二进制数据形式在物理媒体上传输数据 ISO2110，IEEE802，IEEE802.2"></a>物理层 以二进制数据形式在物理媒体上传输数据 ISO2110，IEEE802，IEEE802.2</h4><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220317192047279.png" alt="image-20220317192047279"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS_作用域" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/17/JS_%E4%BD%9C%E7%94%A8%E5%9F%9F/" class="article-date">
+      <time datetime="2022-03-17T10:30:14.809Z" itemprop="datePublished">2022-03-17</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/17/JS_%E4%BD%9C%E7%94%A8%E5%9F%9F/">JS_作用域（this）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="定义时的作用域链"><a href="#定义时的作用域链" class="headerlink" title="定义时的作用域链"></a>定义时的作用域链</h1><h4 id="作⽤域链的作⽤是保证执⾏环境⾥有权访问的变量和函数是有序的，作⽤域链的变量只能-向上访问，变量访问到-window-对象即被终⽌，作⽤域链向下访问变量是不被允许的"><a href="#作⽤域链的作⽤是保证执⾏环境⾥有权访问的变量和函数是有序的，作⽤域链的变量只能-向上访问，变量访问到-window-对象即被终⽌，作⽤域链向下访问变量是不被允许的" class="headerlink" title="作⽤域链的作⽤是保证执⾏环境⾥有权访问的变量和函数是有序的，作⽤域链的变量只能 向上访问，变量访问到 window 对象即被终⽌，作⽤域链向下访问变量是不被允许的"></a>作⽤域链的作⽤是保证执⾏环境⾥有权访问的变量和函数是有序的，作⽤域链的变量只能 向上访问，变量访问到 window 对象即被终⽌，作⽤域链向下访问变量是不被允许的</h4><h4 id="简单的说，作⽤域就是变量与函数的可访问范围，即作⽤域控制着变量与函数的可⻅性和-⽣命周期"><a href="#简单的说，作⽤域就是变量与函数的可访问范围，即作⽤域控制着变量与函数的可⻅性和-⽣命周期" class="headerlink" title="简单的说，作⽤域就是变量与函数的可访问范围，即作⽤域控制着变量与函数的可⻅性和 ⽣命周期"></a>简单的说，作⽤域就是变量与函数的可访问范围，即作⽤域控制着变量与函数的可⻅性和 ⽣命周期</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">0</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f0</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a)</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="keyword">let</span> a = <span class="number">2</span></span><br><span class="line"> f0()()</span><br><span class="line">&#125;</span><br><span class="line">f1()</span><br></pre></td></tr></table></figure>
+
+<h2 id="函数的scope属性是创建是就有的-记录当前环境"><a href="#函数的scope属性是创建是就有的-记录当前环境" class="headerlink" title="函数的scope属性是创建是就有的 记录当前环境"></a>函数的scope属性是创建是就有的 记录当前环境</h2><h2 id="也就是看定义时的作用域链-定义时的哦"><a href="#也就是看定义时的作用域链-定义时的哦" class="headerlink" title="也就是看定义时的作用域链,定义时的哦"></a>也就是看定义时的作用域链,定义时的哦</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function f0()&#123;</span><br><span class="line"> return function()&#123;</span><br><span class="line">  console.log(a)</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function f1()&#123;</span><br><span class="line"> let a = 2</span><br><span class="line"> f0()()</span><br><span class="line">&#125;</span><br><span class="line">f1()</span><br></pre></td></tr></table></figure>
+
+<p>这样就报错</p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220317185951915.png" alt="image-20220317185951915"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS_call_apply_bind" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/17/JS_call_apply_bind/" class="article-date">
+      <time datetime="2022-03-17T02:29:25.699Z" itemprop="datePublished">2022-03-17</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/17/JS_call_apply_bind/">JS_call_apply_bind</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="从上面的结果来看："><a href="#从上面的结果来看：" class="headerlink" title="从上面的结果来看："></a>从上面的结果来看：</h3><h3 id="call、-bind、-apply-这三个函数的第一个参数都是this的指向对象，第二个参数差别就来了："><a href="#call、-bind、-apply-这三个函数的第一个参数都是this的指向对象，第二个参数差别就来了：" class="headerlink" title="call、 bind、 apply 这三个函数的第一个参数都是this的指向对象，第二个参数差别就来了："></a>call、 bind、 apply 这三个函数的第一个参数都是this的指向对象，第二个参数差别就来了：</h3><h3 id="call-的参数是直接放进去的，第二第三第n个参数全都用逗号分隔，直接放到后面obj-myFun-call-db-’江西’-…-‘string’-。"><a href="#call-的参数是直接放进去的，第二第三第n个参数全都用逗号分隔，直接放到后面obj-myFun-call-db-’江西’-…-‘string’-。" class="headerlink" title="call 的参数是直接放进去的，第二第三第n个参数全都用逗号分隔，直接放到后面obj.myFun.call(db,’江西’, …, ‘string’)。"></a>call 的参数是直接放进去的，第二第三第n个参数全都用逗号分隔，直接放到后面obj.myFun.call(db,’江西’, …, ‘string’)。</h3><h3 id="apply的所有参数都必须放在一个数组里面传进去。"><a href="#apply的所有参数都必须放在一个数组里面传进去。" class="headerlink" title="apply的所有参数都必须放在一个数组里面传进去。"></a>apply的所有参数都必须放在一个数组里面传进去。</h3><h3 id="bind除了返回函数以外，它的参数和call-一样。"><a href="#bind除了返回函数以外，它的参数和call-一样。" class="headerlink" title="bind除了返回函数以外，它的参数和call 一样。"></a>bind除了返回函数以外，它的参数和call 一样。</h3><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220317103039334.png" alt="image-20220317103039334"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220317103051400.png" alt="image-20220317103051400"></p>
+<h3 id="person-call-egg"><a href="#person-call-egg" class="headerlink" title="person.call(egg)"></a>person.call(egg)</h3><h3 id="this的隐式绑定，当函数Person引用有上下文对象时-就会把函数person调用的this绑定在这个上下文对象egg中"><a href="#this的隐式绑定，当函数Person引用有上下文对象时-就会把函数person调用的this绑定在这个上下文对象egg中" class="headerlink" title="this的隐式绑定，当函数Person引用有上下文对象时,就会把函数person调用的this绑定在这个上下文对象egg中"></a>this的隐式绑定，当函数Person引用有上下文对象时,就会把函数person调用的this绑定在这个上下文对象egg中</h3><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220317105155335.png" alt="image-20220317105155335"></p>
+<p><strong>eval() 函数计算 JavaScript 字符串，并把它作为脚本代码来执行。</strong></p>
+<p><strong>如果参数是一个表达式，eval() 函数将执行表达式。如果参数是Javascript语句，eval()将执行 Javascript 语句。</strong></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220317140336115.png" alt="image-20220317140336115"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment"> * @Author: your name</span></span><br><span class="line"><span class="comment"> * @Date: 2022-03-17 13:25:20</span></span><br><span class="line"><span class="comment"> * @LastEditTime: 2022-03-17 15:58:45</span></span><br><span class="line"><span class="comment"> * @LastEditors: Please set LastEditors</span></span><br><span class="line"><span class="comment"> * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE</span></span><br><span class="line"><span class="comment"> * @FilePath: \codetest\html\JS_call_apply_bind.html</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>实现call,apply,bind<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">//手写call</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">/*</span></span></span><br><span class="line"><span class="comment"><span class="javascript">    function person()&#123;</span></span></span><br><span class="line"><span class="comment"><span class="javascript">      console.log(this)</span></span></span><br><span class="line"><span class="comment"><span class="javascript">    &#125;</span></span></span><br><span class="line"><span class="comment"><span class="javascript">    let egg = &#123;</span></span></span><br><span class="line"><span class="comment"><span class="javascript">      name : &#x27;但老师&#x27;</span></span></span><br><span class="line"><span class="comment"><span class="javascript">    &#125;</span></span></span><br><span class="line"><span class="comment"><span class="javascript">    Function.prototype.newcall = function(obj) &#123;</span></span></span><br><span class="line"><span class="comment"><span class="javascript">      console.log(&#x27;看看其中this的指向是指向其中调用newcall的那个函数&#x27;,this)</span></span></span><br><span class="line"><span class="comment"><span class="javascript">      obj.p = this;                 //相当于把函数放在这个egg对象里面</span></span></span><br><span class="line"><span class="comment"><span class="javascript">      obj.p();                      //也相当于把函数person调用的this绑定在这个上下文对象egg中，然后在egg的this环境中执行</span></span></span><br><span class="line"><span class="comment"><span class="javascript">      delete obj.p;                 //最后不能改变对象的属性</span></span></span><br><span class="line"><span class="comment"><span class="javascript">      console.log(&#x27;用()就可以执行这个函数&#x27;,this())</span></span></span><br><span class="line"><span class="comment"><span class="javascript">    &#125;</span></span></span><br><span class="line"><span class="comment"><span class="javascript">    person.newcall(egg)</span></span></span><br><span class="line"><span class="comment"><span class="javascript">    */</span></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">a, b, c, d</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">name</span>: <span class="built_in">this</span>.name,</span></span><br><span class="line"><span class="javascript">        <span class="attr">a</span>: a, <span class="attr">b</span>: b, <span class="attr">c</span>: c, <span class="attr">d</span>: d</span></span><br><span class="line"><span class="javascript">      &#125;</span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> egg = &#123;</span></span><br><span class="line"><span class="javascript">      <span class="attr">name</span>: <span class="string">&#x27;但老师&#x27;</span></span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">//加上newcall后面带参数的</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">Function</span>.prototype.newcall = <span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> obj = obj || <span class="built_in">window</span></span></span><br><span class="line"><span class="javascript">      obj.p = <span class="built_in">this</span>;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> newArguement = []</span></span><br><span class="line"><span class="javascript">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; <span class="built_in">arguments</span>.length; i++) &#123;</span></span><br><span class="line"><span class="javascript">        newArguement.push(<span class="string">&quot;arguments[&quot;</span> + i + <span class="string">&quot;]&quot;</span>) <span class="comment">//加法符号，将数组里面的变成字符串</span></span></span><br><span class="line"><span class="javascript">      &#125;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> result = <span class="built_in">eval</span>(<span class="string">&quot;obj.p(&quot;</span> + newArguement + <span class="string">&quot;)&quot;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">delete</span> obj.p;<span class="comment">//最后不能改变对象的属性</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> result</span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> finnalcall = person.newcall(egg, <span class="string">&quot;aaa&quot;</span>, <span class="string">&quot;bbb&quot;</span>, <span class="string">&quot;ccc&quot;</span>, <span class="string">&quot;ddd&quot;</span>)</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(finnalcall)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">//实现newapply方法,跟call不同的是apply的所有参数都必须放在一个数组里面传进去</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">Function</span>.prototype.newapply = <span class="function"><span class="keyword">function</span> (<span class="params">obj, arr</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> obj = obj || <span class="built_in">window</span>,result;</span></span><br><span class="line"><span class="javascript">      obj.p = <span class="built_in">this</span>;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">if</span> (!arr) &#123;</span></span><br><span class="line"><span class="javascript">        result = obj.p();</span></span><br><span class="line"><span class="javascript">      &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> newArguement = []</span></span><br><span class="line"><span class="javascript">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span></span><br><span class="line"><span class="javascript">          newArguement.push(<span class="string">&quot;arr[&quot;</span> + i + <span class="string">&quot;]&quot;</span>) <span class="comment">//加法符号，将数组里面的变成字符串</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">        result = <span class="built_in">eval</span>(<span class="string">&quot;obj.p(&quot;</span> + newArguement + <span class="string">&quot;)&quot;</span>)</span></span><br><span class="line"><span class="javascript">      &#125;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">delete</span> obj.p;<span class="comment">//最后不能改变对象的属性</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> result</span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> finnalapply = person.newapply(egg, [<span class="string">&quot;aaa&quot;</span>, <span class="string">&quot;bbb&quot;</span>, <span class="string">&quot;ccc&quot;</span>, <span class="string">&quot;ddd&quot;</span>])</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(finnalapply)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS_for_in_of" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/16/JS_for_in_of/" class="article-date">
+      <time datetime="2022-03-16T11:31:17.935Z" itemprop="datePublished">2022-03-16</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/16/JS_for_in_of/">JS_for_in_of</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>在JavaScript中遍历数组通常是使用fori循环，自ES5发布后也可以使用forEach，另外在ES5具有遍历数组功能的还有map、filter、some、every、reduce、reduceRight等，只不过他们的返回结果不一样。<strong>但是使用forEach遍历数组的话，使用break不能中断循环，使用return也不能返回到外层函数。</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">myArray.forEach(function (currentValue, index, arr) &#123;</span><br><span class="line">    console.log(currentValue);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>因此另外有for-in循环和for-of循环两种增强型循环。其中，<strong>for-in是ES5标准，遍历的是key（可遍历对象、数组或字符串的key）；for-of是ES6标准，遍历的是value（可遍历对象、数组或字符串的value）。</strong></p>
+<h3 id="for-in"><a href="#for-in" class="headerlink" title="for-in"></a>for-in</h3><p>直接看简单的代码示例了解用法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 4, 5, 7];</span><br><span class="line">for (var index in arr) &#123;</span><br><span class="line">　　console.log(myArray[index]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用for-in可以遍历数组，但是会存在以下问题：</p>
+<p>1.index索引为字符串型数字（注意，非数字），不能直接进行几何运算。</p>
+<p>2.遍历顺序有可能不是按照实际数组的内部顺序（可能按照随机顺序）。</p>
+<p>3.使用for-in会遍历数组所有的可枚举属性，包括原型。例如上例的原型方法method和name属性都会被遍历出来，通常需要配合hasOwnProperty()方法判断某个属性是否该对象的实例属性，来将原型对象从循环中剔除。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for (var key in myObject) &#123;</span><br><span class="line">　　if（myObject.hasOwnProperty(key))&#123;</span><br><span class="line">　　　　console.log(key);</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>所以for-in更适合遍历对象，通常是建议不要使用for-in遍历数组。</p>
+<h3 id="for-of"><a href="#for-of" class="headerlink" title="for-of"></a>for-of</h3><p>for-of可以简单、正确地遍历数组（不遍历原型method和name）。</p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var myArray = [1, 2, 4, 5, 6, 7];</span><br><span class="line">myArray.name = &quot;数组&quot;;</span><br><span class="line">myArray.getName = function() &#123; return this.name; &#125;</span><br><span class="line">for (var value of myArray) &#123;</span><br><span class="line">    console.log(value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p>1.这是最简洁、最直接的遍历数组元素的语法。</p>
+<p>2.这个方法避开了for-in循环的所有缺陷。</p>
+<p>3.与forEach()不同的是，它可以正确响应break、continue和return语句。</p>
+<p>因此建议是使用for-of遍历数组，因为for-of遍历的只是数组内的元素，而不包括数组的原型属性method和索引name。</p>
+<p>区别总结</p>
+<p><strong>简单总结就是，for in遍历的是数组的索引（即键名），而for of遍历的是数组元素值。</strong></p>
+<p><strong>for-in总是得到对象的key或数组、字符串的下标。</strong></p>
+<p><strong>for-of总是得到对象的value或数组、字符串的值，另外还可以用于遍历Map和Set。</strong></p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var set = new Set();</span><br><span class="line">set.add(&quot;a&quot;).add(&quot;b&quot;).add(&quot;d&quot;).add(&quot;c&quot;);</span><br><span class="line"></span><br><span class="line">// 遍历Set</span><br><span class="line">for (let s of set) &#123;</span><br><span class="line">    console.log(s);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var map = new Map();</span><br><span class="line">map.set(&quot;a&quot;, 1).set(&quot;b&quot;, 2).set(999, 3);</span><br><span class="line"></span><br><span class="line">// 遍历Map</span><br><span class="line">for(let [k, v] of map) &#123;</span><br><span class="line">    console.log(k, v);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS_数据代理" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/16/JS_%E6%95%B0%E6%8D%AE%E4%BB%A3%E7%90%86/" class="article-date">
+      <time datetime="2022-03-16T08:46:03.784Z" itemprop="datePublished">2022-03-16</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/16/JS_%E6%95%B0%E6%8D%AE%E4%BB%A3%E7%90%86/">JS_数据代理</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220316164819521.png" alt="image-20220316164819521"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220316164836241.png" alt="image-20220316164836241"></p>
+<p>proxy对于object.defineprototype的优势</p>
+<p>1：可以不必循环遍历属性</p>
+<p>2：可以监听到新增加的属性</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS_事件捕获和事件冒泡" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/15/JS_%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/" class="article-date">
+      <time datetime="2022-03-14T16:00:00.000Z" itemprop="datePublished">2022-03-15</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/15/JS_%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/">JS_事件捕获和事件冒泡</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="事件捕获（从dom树顶部到底部）"><a href="#事件捕获（从dom树顶部到底部）" class="headerlink" title="事件捕获（从dom树顶部到底部）"></a>事件捕获（从dom树顶部到底部）</h2><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220315150446232.png" alt="image-20220315150446232"></p>
+<h2 id="事件冒泡-从dom树底部到顶部"><a href="#事件冒泡-从dom树底部到顶部" class="headerlink" title="事件冒泡(从dom树底部到顶部)"></a>事件冒泡(从dom树底部到顶部)</h2><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220315150428049.png" alt="image-20220315150428049"></p>
+<h4 id="addEventListener-1-2-false-事件冒泡（默认）"><a href="#addEventListener-1-2-false-事件冒泡（默认）" class="headerlink" title="addEventListener(1,2,false):事件冒泡（默认）"></a>addEventListener(1,2,false):事件冒泡（默认）</h4><h4 id="addEventListener-1-2-true-事件捕获"><a href="#addEventListener-1-2-true-事件捕获" class="headerlink" title="addEventListener(1,2,true):事件捕获"></a>addEventListener(1,2,true):事件捕获</h4><h4 id="事件捕获先于冒泡"><a href="#事件捕获先于冒泡" class="headerlink" title="事件捕获先于冒泡"></a>事件捕获先于冒泡</h4><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220315150628772.png" alt="image-20220315150628772"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
+    </nav>
+  
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2022 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
