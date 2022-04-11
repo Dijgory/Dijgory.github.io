@@ -262,11 +262,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-新特性CSS3" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-前端性能优化" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/03/22/%E6%96%B0%E7%89%B9%E6%80%A7CSS3/" class="article-date">
-      <time datetime="2022-03-22T10:49:38.460Z" itemprop="datePublished">2022-03-22</time>
+      <a href="/2022/03/30/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="article-date">
+      <time datetime="2022-03-30T03:13:32.611Z" itemprop="datePublished">2022-03-30</time>
 </a>
 
 
@@ -281,7 +281,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/22/%E6%96%B0%E7%89%B9%E6%80%A7CSS3/">CSS3新特性</a>
+      <a class="article-title" href="/2022/03/30/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">前端性能优化</a>
     </h1>
   
 
@@ -291,25 +291,105 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><strong>2.过渡</strong>  transition： CSS属性，花费时间，效果曲线(默认ease)，延迟时间(默认0)复制代码</p>
-<p><strong>3.动画</strong>  animation：动画名称，一个周期花费时间，运动曲线（默认ease），动画延迟（默认0），播放次数（默认1），是否反向播放动画（默认normal），是否暂停动画（默认running）复制代码</p>
-<p><strong>4.形状转换</strong>  transform:适用于2D或3D转换的元素</p>
-<p>rotate(30deg);  translate(30px,30px);  scale(.8);    skew(10deg,10deg);    rotateX(180deg);   rotateY(180deg);    rotate3d(10,10,10,90deg);</p>
-<p><strong>5.选择器</strong></p>
-<p><strong>6.阴影</strong>  box-shadow: 水平阴影的位置 垂直阴影的位置 模糊距离 阴影的大小 阴影的颜色 阴影开始方向（默认是从里往外，设置inset就是从外往里）;复制代码</p>
-<p><strong>7.边框</strong>  border-image: 图片url 图像边界向内偏移 图像边界的宽度(默认为边框的宽度) 用于指定在边框外部绘制偏移的量（默认0） 铺满方式–重复（repeat）、拉伸（stretch）或铺满（round）（默认：拉伸（stretch））;</p>
-<p><strong>8.背景</strong> background-clip 制定背景绘制（显示）区域 background-origin  background-size</p>
-<p>1.（background-clip: border-box;）默认情况（从边框开始绘制）                               2.（background-clip: padding-box;）从padding开始绘制（显示），不算border,，相当于把border那里的背景给裁剪掉！                                                                       3.（background-clip: content-box;）只在内容区绘制（显示），不算padding和border，相当于把padding和border那里的背景给裁剪掉！</p>
-<p><strong>9.反射</strong>   -webkit-box-reflect:方向[ above-上 | below-下 | right-右 | left-左 ]，偏移量，遮罩图片</p>
-<p><strong>10.文字</strong>  换行  语法：word-break: normal|break-all|keep-all;、语法：word-wrap: normal|break-word; 超出省略号  text-overflow:clip|ellipsis|string                                                 文字阴影  语法：text-shadow:水平阴影，垂直阴影，模糊的距离，以及阴影的颜色。</p>
-<p><strong>11.颜色</strong> rgba（rgb为颜色值，a为透明度） color: rgba(255,00,00,1);background: rgba(00,00,00,.5); hsla h:色相”，“s：饱和度”，“l：亮度”，“a：透明度” color: hsla( 112, 72%, 33%, 0.68);background-color: hsla( 49, 65%, 60%, 0.68);复制代码</p>
-<p><strong>12.渐变</strong></p>
-<p><strong>13.Filter</strong>（滤镜）：黑白色filter: grayscale(100%)、褐色filter:sepia(1)、饱和度saturate(2)、色相旋转hue-rotate(90deg)、反色filter:invert(1)、透明度opacity(.5)、亮度brightness(.5)、对比度contrast(2)、模糊blur(3px)</p>
-<p><strong>14.弹性布局</strong> <a href="https://links.jianshu.com/go?to=https://link.juejin.im/?target=http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">F</a>lex</p>
-<p><strong>15.栅格布局</strong> grid</p>
-<p><strong>16.多列布局</strong></p>
-<p><strong>17.盒模型定义</strong>  box-sizing:border-box的时候，边框和padding包含在元素的宽高之内！              box-sizing:content-box的时候，边框和padding不包含在元素的宽高之内！如下图</p>
-<p><strong>18.媒体查询</strong> 就在监听屏幕尺寸的变化，在不同尺寸的时候显示不同的样式！在做响应式的网站里面，是必不可少的一环！</p>
+        <h3 id="如何进⾏⽹站性能优化"><a href="#如何进⾏⽹站性能优化" class="headerlink" title="如何进⾏⽹站性能优化"></a>如何进⾏⽹站性能优化</h3><h4 id="content-⽅⾯-减少-HTTP-请求：合并⽂件、-CSS-精灵、-inline-Image-减少-DNS-查询：-DNS-缓存、将资源分布到恰当数量的主机名-减少-DOM-元素数量"><a href="#content-⽅⾯-减少-HTTP-请求：合并⽂件、-CSS-精灵、-inline-Image-减少-DNS-查询：-DNS-缓存、将资源分布到恰当数量的主机名-减少-DOM-元素数量" class="headerlink" title="content ⽅⾯ 减少 HTTP 请求：合并⽂件、 CSS 精灵、 inline Image 减少 DNS 查询： DNS 缓存、将资源分布到恰当数量的主机名 减少 DOM 元素数量"></a>content ⽅⾯ 减少 HTTP 请求：合并⽂件、 CSS 精灵、 inline Image 减少 DNS 查询： DNS 缓存、将资源分布到恰当数量的主机名 减少 DOM 元素数量</h4><h4 id="Server-⽅⾯-使⽤-CDN-配置-ETag-对组件使⽤-Gzip-压缩"><a href="#Server-⽅⾯-使⽤-CDN-配置-ETag-对组件使⽤-Gzip-压缩" class="headerlink" title="Server ⽅⾯ 使⽤ CDN 配置 ETag 对组件使⽤ Gzip 压缩"></a>Server ⽅⾯ 使⽤ CDN 配置 ETag 对组件使⽤ Gzip 压缩</h4><h4 id="Cookie-⽅⾯-减⼩-cookie-⼤⼩"><a href="#Cookie-⽅⾯-减⼩-cookie-⼤⼩" class="headerlink" title="Cookie ⽅⾯ 减⼩ cookie ⼤⼩"></a>Cookie ⽅⾯ 减⼩ cookie ⼤⼩</h4><h4 id="css-⽅⾯-将样式表放到⻚⾯顶部-不使⽤-CSS-表达式-使⽤-不使⽤-import"><a href="#css-⽅⾯-将样式表放到⻚⾯顶部-不使⽤-CSS-表达式-使⽤-不使⽤-import" class="headerlink" title="css ⽅⾯ 将样式表放到⻚⾯顶部 不使⽤ CSS 表达式 使⽤  不使⽤ @import"></a>css ⽅⾯ 将样式表放到⻚⾯顶部 不使⽤ CSS 表达式 使⽤  不使⽤ @import</h4><h4 id="Javascript-⽅⾯-将脚本放到⻚⾯底部-将-javascript-和-css-从外部引⼊-压缩-javascript-和-css-删除不需要的脚本-减少-DOM-访问"><a href="#Javascript-⽅⾯-将脚本放到⻚⾯底部-将-javascript-和-css-从外部引⼊-压缩-javascript-和-css-删除不需要的脚本-减少-DOM-访问" class="headerlink" title="Javascript ⽅⾯ 将脚本放到⻚⾯底部 将 javascript 和 css 从外部引⼊ 压缩 javascript 和 css 删除不需要的脚本 减少 DOM 访问"></a>Javascript ⽅⾯ 将脚本放到⻚⾯底部 将 javascript 和 css 从外部引⼊ 压缩 javascript 和 css 删除不需要的脚本 减少 DOM 访问</h4><h4 id="图⽚⽅⾯-优化图⽚：根据实际颜⾊需要选择⾊深、压缩-优化-css-精灵-不要在-HTML-中拉伸图⽚"><a href="#图⽚⽅⾯-优化图⽚：根据实际颜⾊需要选择⾊深、压缩-优化-css-精灵-不要在-HTML-中拉伸图⽚" class="headerlink" title="图⽚⽅⾯ 优化图⽚：根据实际颜⾊需要选择⾊深、压缩 优化 css 精灵 不要在 HTML 中拉伸图⽚"></a>图⽚⽅⾯ 优化图⽚：根据实际颜⾊需要选择⾊深、压缩 优化 css 精灵 不要在 HTML 中拉伸图⽚</h4>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS_XSS_CRSF" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/29/JS_XSS_CRSF/" class="article-date">
+      <time datetime="2022-03-29T13:34:01.410Z" itemprop="datePublished">2022-03-29</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/29/JS_XSS_CRSF/">JS_XSS_CRSF</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>1.Csrf攻击概念：</p>
+<p>csrf攻击(Cross-site request forgery):跨站请求伪造;</p>
+<p>2.Csrf攻击原理:<br><img src="https://img2018.cnblogs.com/blog/1487709/201905/1487709-20190524111316075-1098138829.png" alt="img"></p>
+<p>用户是网站A的注册用户，且登录进去，于是网站A就给用户下发cookie。</p>
+<p>从上图可以看出，要完成一次CSRF攻击，受害者必须满足两个必要的条件：</p>
+<p>（1）登录受信任网站A，并在本地生成Cookie。（如果用户没有登录网站A，那么网站B在诱导的时候，请求网站A的api接口时，会提示你登录）</p>
+<p>（2）在不登出A的情况下，访问危险网站B（其实是利用了网站A的漏洞）。</p>
+<p>我们在讲CSRF时，一定要把上面的两点说清楚。</p>
+<p>温馨提示一下，cookie保证了用户可以处于登录状态，但网站B其实拿不到 cookie。</p>
+<p>举个例子，前端事假你，微博网站有个api接口有漏洞，导致很多用户的粉丝暴增。</p>
+<h4 id="3-Csrf如何防御"><a href="#3-Csrf如何防御" class="headerlink" title="3.Csrf如何防御"></a>3.Csrf如何防御</h4><h4 id="方法一、Token-验证：（用的最多）"><a href="#方法一、Token-验证：（用的最多）" class="headerlink" title="方法一、Token 验证：（用的最多）"></a>方法一、Token 验证：（用的最多）</h4><h4 id="（1）服务器发送给客户端一个token；"><a href="#（1）服务器发送给客户端一个token；" class="headerlink" title="（1）服务器发送给客户端一个token；"></a>（1）服务器发送给客户端一个token；</h4><h4 id="（2）客户端提交的表单中带着这个token。"><a href="#（2）客户端提交的表单中带着这个token。" class="headerlink" title="（2）客户端提交的表单中带着这个token。"></a>（2）客户端提交的表单中带着这个token。</h4><h4 id="（3）如果这个-token-不合法，那么服务器拒绝这个请求。"><a href="#（3）如果这个-token-不合法，那么服务器拒绝这个请求。" class="headerlink" title="（3）如果这个 token 不合法，那么服务器拒绝这个请求。"></a>（3）如果这个 token 不合法，那么服务器拒绝这个请求。</h4><h4 id="方法二：隐藏令牌："><a href="#方法二：隐藏令牌：" class="headerlink" title="方法二：隐藏令牌："></a>方法二：隐藏令牌：</h4><h4 id="把-token-隐藏在-http-的-head头中。"><a href="#把-token-隐藏在-http-的-head头中。" class="headerlink" title="把 token 隐藏在 http 的 head头中。"></a>把 token 隐藏在 http 的 head头中。</h4><p>方法二和方法一有点像，本质上没有太大区别，只是使用方式上有区别。</p>
+<h4 id="方法三、Referer-验证："><a href="#方法三、Referer-验证：" class="headerlink" title="方法三、Referer 验证："></a>方法三、Referer 验证：</h4><h4 id="Referer-指的是页面请求来源。意思是，只接受本站的请求，服务器才做响应；如果不是，就拦截。"><a href="#Referer-指的是页面请求来源。意思是，只接受本站的请求，服务器才做响应；如果不是，就拦截。" class="headerlink" title="Referer 指的是页面请求来源。意思是，只接受本站的请求，服务器才做响应；如果不是，就拦截。"></a>Referer 指的是页面请求来源。意思是，只接受本站的请求，服务器才做响应；如果不是，就拦截。</h4><p>4.XSS</p>
+<p>1、XSS的基本概念</p>
+<p>XSS（Cross Site Scripting）：跨域脚本攻击。</p>
+<p>接下来，我们详细讲一下 XSS 的内容。</p>
+<p>预备知识：HTTP、Cookie、Ajax。</p>
+<p>2XSS的攻击原理</p>
+<p>XSS攻击的核心原理是：不需要你做任何的登录认证，它会通过合法的操作（比如在url中输入、在评论框中输入），向你的页面注入脚本（可能是js、hmtl代码块等）。</p>
+<p>最后导致的结果可能是：</p>
+<p>盗用Cookie破坏页面的正常结构，插入广告等恶意内容D-doss攻击XSS的攻击方式</p>
+<p>1、反射型发出请求时，XSS代码出现在url中，作为输入提交到服务器端，服务器端解析后响应，XSS代码随响应内容一起传回给浏览器，最后浏览器解析执行XSS代码。这个过程像一次反射，所以叫反射型XSS。</p>
+<p>2、存储型存储型XSS和反射型XSS的差别在于，提交的代码会存储在服务器端（数据库、内存、文件系统等），下次请求时目标页面时不用再提交XSS代码。</p>
+<p>XSS的防范措施（encode + 过滤）</p>
+<p>3、XSS的防范措施主要有三个：</p>
+<h4 id="1、编码："><a href="#1、编码：" class="headerlink" title="1、编码："></a>1、编码：</h4><h4 id="对用户输入的数据进行HTML-Entity编码。"><a href="#对用户输入的数据进行HTML-Entity编码。" class="headerlink" title="对用户输入的数据进行HTML Entity编码。"></a>对用户输入的数据进行HTML Entity编码。</h4><h4 id="如上图所示，把字符转换成-转义字符。"><a href="#如上图所示，把字符转换成-转义字符。" class="headerlink" title="如上图所示，把字符转换成 转义字符。"></a>如上图所示，把字符转换成 转义字符。</h4><h4 id="Encode的作用是将"><a href="#Encode的作用是将" class="headerlink" title="Encode的作用是将"></a>Encode的作用是将</h4><h4 id="var等一些字符进行转化，使得浏览器在最终输出结果上是一样的。"><a href="#var等一些字符进行转化，使得浏览器在最终输出结果上是一样的。" class="headerlink" title="$var等一些字符进行转化，使得浏览器在最终输出结果上是一样的。"></a>$var等一些字符进行转化，使得浏览器在最终输出结果上是一样的。</h4><p>比如说这段代码：</p>
+<script>alert(1)</script>
+<p>若不进行任何处理，则浏览器会执行alert的js操作，实现XSS注入。</p>
+<p>进行编码处理之后，L在浏览器中的显示结果就是</p>
+<script>alert(1)</script>
+<p>，实现了将$var作为纯文本进行输出，且不引起JavaScript的执行。</p>
+<p>参考链接：4类防御XSS的有效方法</p>
+<p>2、过滤：</p>
+<p>移除用户输入的和事件相关的属性。如onerror可以自动触发攻击，还有onclick等。（总而言是，过滤掉一些不安全的内容）移除用户输入的Style节点、Script节点、Iframe节点。（尤其是Script节点，它可是支持跨域的呀，一定要移除）。3、校正</p>
+<p>避免直接对HTML Entity进行解码。使用DOM Parse转换，校正不配对的DOM标签。备注：我们应该去了解一下</p>
+<p>DOM Parse</p>
+<p>这个概念，它的作用是把文本解析成DOM结构。</p>
+<p>比较常用的做法是，通过第一步的编码转成文本，然后第三步转成DOM对象，然后经过第二步的过滤。</p>
+<p>还有一种简洁的答案：</p>
+<p>首先是encode，如果是富文本，就白名单。</p>
+<p>CSRF 和 XSS 的区别</p>
+<p>面试官还可能喜欢问二者的区别。</p>
+<p>区别一：</p>
+<p>CSRF：需要用户先登录网站A，获取 cookie。XSS：不需要登录。区别二：（原理的区别）</p>
+<p>CSRF：是利用网站A本身的漏洞，去请求网站A的api。XSS：是向网站 A 注入 JS代码，然后执行 JS 里的代码，篡改网站A的内容。</p>
 
       
     </div>
@@ -336,11 +416,11 @@
 
 
   
-    <article id="post-新特性ES6" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-CSS_grid" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/03/22/%E6%96%B0%E7%89%B9%E6%80%A7ES6/" class="article-date">
-      <time datetime="2022-03-22T10:48:49.172Z" itemprop="datePublished">2022-03-22</time>
+      <a href="/2022/03/29/CSS_grid/" class="article-date">
+      <time datetime="2022-03-29T11:21:38.193Z" itemprop="datePublished">2022-03-29</time>
 </a>
 
 
@@ -355,7 +435,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/22/%E6%96%B0%E7%89%B9%E6%80%A7ES6/">ES6的新特性</a>
+      <a class="article-title" href="/2022/03/29/CSS_grid/">CSS_grid</a>
     </h1>
   
 
@@ -365,78 +445,283 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><strong>1. let const</strong></p>
-<p>let 表示申明变量。const 表示申明常量。</p>
+        <p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220329192333940.png" alt="image-20220329192333940"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220329192252550.png" alt="image-20220329192252550"></p>
+<p>利用fr指定浮动宽度</p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220329192309226.png" alt="image-20220329192309226"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220329192421790.png" alt="image-20220329192421790"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220329192445103.png" alt="image-20220329192445103"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220329192456420.png" alt="image-20220329192456420"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220329192539156.png" alt="image-20220329192539156"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220329192550357.png" alt="image-20220329192550357"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220329192658597.png" alt="image-20220329192658597"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220329192722461.png" alt="image-20220329192722461"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220329192927971.png" alt="image-20220329192927971"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220329192948378.png" alt="image-20220329192948378"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220329193000933.png" alt="image-20220329193000933"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-VUE_路由懒加载" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/28/VUE_%E8%B7%AF%E7%94%B1%E6%87%92%E5%8A%A0%E8%BD%BD/" class="article-date">
+      <time datetime="2022-03-28T06:47:13.828Z" itemprop="datePublished">2022-03-28</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/28/VUE_%E8%B7%AF%E7%94%B1%E6%87%92%E5%8A%A0%E8%BD%BD/">VUE_路由懒加载</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h4 id="利用箭头函数引入路由文件，而不是开始直接全部Import进去"><a href="#利用箭头函数引入路由文件，而不是开始直接全部Import进去" class="headerlink" title="利用箭头函数引入路由文件，而不是开始直接全部Import进去"></a>利用箭头函数引入路由文件，而不是开始直接全部Import进去</h4><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220328144853677.png" alt="image-20220328144853677"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220328145000675.png" alt="image-20220328145000675"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220328145051455.png" alt="image-20220328145051455"></p>
+<p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220328145117041.png" alt="image-20220328145117041"></p>
+<p>跳转的时候再去加载这个路由信息</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JS_箭头函数" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/28/JS_%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" class="article-date">
+      <time datetime="2022-03-28T02:54:24.823Z" itemprop="datePublished">2022-03-28</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/28/JS_%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">JS_箭头函数</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>OK,对于箭头函数的this 用一句话概括：<strong>箭头函数中的this指向的是定义时的this，而不是执行时的this。</strong></p>
+<p>如果上面这句话听的是懂非懂或者完全不懂的，没关系，下面会有案例讲解。</p>
+<h2 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h2><p>来看看this的一个使用案例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个对象</span></span><br><span class="line">    <span class="keyword">var</span> obj = &#123;</span><br><span class="line">        <span class="attr">x</span>:<span class="number">100</span>, <span class="comment">//属性x</span></span><br><span class="line">        <span class="function"><span class="title">show</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//延迟500毫秒，输出x的值</span></span><br><span class="line">            <span class="built_in">setTimeout</span>(</span><br><span class="line">               <span class="comment">//匿名函数</span></span><br><span class="line">               <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="built_in">this</span>.x);&#125;,</span><br><span class="line">               <span class="number">500</span></span><br><span class="line">           );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    obj.show();<span class="comment">//打印结果：undefined</span></span><br></pre></td></tr></table></figure>
+
+<p>案例中，我们的obj对象中有一个属性x和一个属性show( )方法（用的是对象的简洁表示法，<a href="https://link.zhihu.com/?target=http://mp.weixin.qq.com/s?__biz=MzA3MDg1NzQyNA==&mid=2649654084&idx=1&sn=e56effc319f448f5744970e767997461&scene=21%23wechat_redirect">第九节已讲解，点击查看</a>），show( )通过this打印出x的值。可最后一句代码执行后，我们打印出的结果是undefined。这是为什么呢？难道x的值不是100吗？</p>
+<p>没错，x的值确实是100，但问题出在了this上，当代码执行到了setTimeout( )的时候，此时的this已经变成了window对象（setTimeout( )是window对象的方法），已经不再是obj对象了，所以我们用this.x获取的时候，获取的不是obj.x的值，而是window.x的值，再加上window上没有定义属性x，所以得到的结果就是：undefined。</p>
+<p>我们可以用一些ES5中的知识来巧妙地避过这个坑，但是，我们今天主要介绍的是ES6的箭头函数。</p>
+<p>箭头函数闪亮登场</p>
+<p>如果使用箭头函数来编写同样的一段代码，得到的this.x又是另一番景象。我们来试试看：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个对象</span></span><br><span class="line">    <span class="keyword">var</span> obj = &#123;</span><br><span class="line">        <span class="attr">x</span>:<span class="number">100</span>,<span class="comment">//属性x</span></span><br><span class="line">        <span class="function"><span class="title">show</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="comment">//延迟500毫秒，输出x的值</span></span><br><span class="line">            <span class="built_in">setTimeout</span>(</span><br><span class="line">               <span class="comment">//不同处：箭头函数</span></span><br><span class="line">               <span class="function">() =&gt;</span> &#123; <span class="built_in">console</span>.log(<span class="built_in">this</span>.x)&#125;,</span><br><span class="line">               <span class="number">500</span></span><br><span class="line">            );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    obj.show();<span class="comment">//打印结果：100</span></span><br></pre></td></tr></table></figure>
+
+<p>同样的一段代码，唯一的不用就是setTimeout中，原本的匿名函数用箭头函数代替了，你可以往上翻，对比着看两段代码的不同之处。此外，最大的不同的是打印结果，用箭头函数编写的这段代码，成功地打印出了我们想要的结果：100。</p>
+<p>为什么是这样？正如文章第三段所概括：</p>
+<blockquote>
+<p><strong>箭头函数中的this指向的是定义时的this，而不是执行时的this</strong></p>
+</blockquote>
+<p>当定义obj的show( )方法的时候，我们在箭头函数编写this.x，此时的this是指的obj，所以this.x指的是obj.x。而在show()被调用的时候，this依然指向的是被定义时候所指向的对象，也就是obj对象，故打印出：100。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">x</span> : <span class="number">2</span>,</span><br><span class="line">    <span class="attr">say</span>: <span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.x)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">    <span class="attr">x</span> : <span class="number">2</span>,</span><br><span class="line">    <span class="function"><span class="title">say</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.x)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.say()  <span class="comment">//1</span></span><br><span class="line">obj1.say()  <span class="comment">//2</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-CSS_BFC" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/28/CSS_BFC/" class="article-date">
+      <time datetime="2022-03-28T01:54:15.702Z" itemprop="datePublished">2022-03-28</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/28/CSS_BFC/">CSS_BFC</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220328095457124.png" alt="image-20220328095457124"></p>
+<h2 id="一、BFC-的概念"><a href="#一、BFC-的概念" class="headerlink" title="一、BFC 的概念"></a>一、BFC 的概念</h2><h3 id="1-规范解释"><a href="#1-规范解释" class="headerlink" title="1.规范解释"></a>1.规范解释</h3><blockquote>
+<p>块格式化上下文（Block Formatting Context，BFC）是Web页面的可视化CSS渲染的一部分，是布局过程中生成块级盒子的区域，也是浮动元素与其他元素的交互限定区域。</p>
+</blockquote>
+<h3 id="2-通俗理解"><a href="#2-通俗理解" class="headerlink" title="2.通俗理解"></a>2.通俗理解</h3><ul>
+<li>BFC 是一个独立的布局环境,可以理解为一个容器,在这个容器中按照一定规则进行物品摆放,并且<strong>不会影响其它环境中的物品</strong>。</li>
+<li><strong>如果一个元素符合触发 BFC 的条件，则 BFC 中的元素布局不受外部影响。</strong></li>
+<li>浮动元素会创建 BFC，则浮动元素内部子元素主要受该浮动元素影响，所以<strong>两个浮动元素之间是互不影响的</strong>。</li>
+</ul>
+<h2 id="二、创建-BFC"><a href="#二、创建-BFC" class="headerlink" title="二、创建 BFC"></a>二、创建 BFC</h2><ol>
+<li>根元素或包含根元素的元素</li>
+<li>浮动元素 float ＝ left | right 或 inherit<strong>（≠ none）</strong></li>
+<li>绝对定位元素 position ＝ absolute 或 fixed</li>
+<li>display ＝ inline-block | flex | inline-flex | table-cell 或 table-caption</li>
+<li>overflow ＝ hidden | auto 或 scroll <strong>(≠ visible)</strong></li>
+</ol>
+<h2 id="三、BFC-的特性"><a href="#三、BFC-的特性" class="headerlink" title="三、BFC 的特性"></a>三、BFC 的特性</h2><ol>
+<li>BFC 是一个独立的容器，容器内子元素不会影响容器外的元素。反之亦如此。</li>
+<li>盒子从顶端开始垂直地一个接一个地排列，盒子之间垂直的间距是由 margin 决定的。</li>
+<li>在同一个 BFC 中，两个相邻的块级盒子的<strong>垂直外边距</strong>会发生重叠。</li>
+<li><strong>BFC 区域不会和 float box 发生重叠。</strong></li>
+<li><strong>BFC 能够识别并包含浮动元素，当计算其区域的高度时，浮动元素也可以参与计算了。</strong></li>
+</ol>
+<h2 id="四、BFC-的作用"><a href="#四、BFC-的作用" class="headerlink" title="四、BFC 的作用"></a>四、BFC 的作用</h2><h3 id="1-包含浮动元素（清除浮动）"><a href="#1-包含浮动元素（清除浮动）" class="headerlink" title="1.包含浮动元素（清除浮动）"></a>1.包含浮动元素（清除浮动）</h3><ul>
+<li>浮动元素会脱离文档流(绝对定位元素也会脱离文档流)，导致无法计算准确的高度，这种问题称为<strong>高度塌陷</strong>。</li>
+<li>解决高度塌陷问题的前提是能够识别并包含浮动元素，也就是<strong>清除浮动</strong>。</li>
+</ul>
+<p><img src="https://segmentfault.com/img/bVm2qT" alt="清除浮动"></p>
+<p>问题举例：如上左图所示，容器（container）没有高度或者 height = auto ,并且其子元素（sibling）是浮动元素，所以该容器的高度是不会被撑开的，即高度塌陷。</p>
+<p>解决方法：<strong>在容器（container）中创建 BFC。</strong></p>
+<p>HTML</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">&quot;Sibling&quot;</span>&gt;&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">&quot;Sibling&quot;</span>&gt;&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123; </span><br><span class="line">        <span class="attribute">overflow</span>: hidden; <span class="comment">/* creates block formatting context */</span> </span><br><span class="line">        <span class="attribute">background-color</span>: green; </span><br><span class="line">&#125; </span><br><span class="line"><span class="selector-class">.container</span> <span class="selector-class">.Sibling</span> &#123; </span><br><span class="line">        <span class="attribute">float</span>: left; </span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">10px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: lightgreen;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>特别提示：</p>
 <ul>
-<li>常量定义了就不能改了。对象除外，因为对象指向的地址没变。</li>
-<li>const在申明是必须被赋值。</li>
-<li>两者都为块级作用域。</li>
+<li>通过 overflow:hidden 创建 BFC，固然可以解决高度塌陷的问题，但是大范围应用在布局上肯定<strong>不是最合适的</strong>，毕竟 overflow:hidden 会造成溢出隐藏的问题，尤其是与 JS 的交互效果会有影响。</li>
+<li>我们可以使用 <strong>clearfix</strong> 实现清除浮动，这里就不多介绍了，想要了解的可以阅读<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000013664630">前端面试题-clearfix（清除浮动）</a>。</li>
 </ul>
-<p>块级作用域与函数作用域。任何一对花括号（｛和｝）中的语句集都属于一个块，在这之中定义的所有变量在代码块外都是不可见的，我们称之为块级作用域。函数作用域就好理解了，定义在函数中的参数和变量在函数外部是不可见的。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="number">1</span></span><br><span class="line">a = <span class="number">0</span> <span class="comment">//报错</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-导致外边距折叠"><a href="#2-导致外边距折叠" class="headerlink" title="2.导致外边距折叠"></a>2.导致外边距折叠</h3><p><strong>相邻</strong>的两个盒子（可能是兄弟关系也可能是祖先关系）的垂直边距相遇时， 它们将形成一个外边距。这个外边距的高度等于两个发生折叠的外边距的高度中的<strong>较大者</strong>。</p>
+<p><img src="https://segmentfault.com/img/bV5GnA?w=700&h=250" alt="导致外边距折叠"></p>
+<p>HTML</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="keyword">class</span>=&quot;<span class="symbol">Container</span>&quot;&gt; </span><br><span class="line">    &lt;<span class="symbol">p</span>&gt;<span class="symbol">Sibling</span> <span class="symbol">1</span>&lt;/<span class="symbol">p</span>&gt; </span><br><span class="line">    &lt;<span class="symbol">p</span>&gt;<span class="symbol">Sibling</span> <span class="symbol">2</span>&lt;/<span class="symbol">p</span>&gt; </span><br><span class="line">&lt;/<span class="symbol">div</span>&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>2. 模块字符串``</strong></p>
-<p>可以使用反引号````来进行字符拼接。${}</p>
-<p><strong>3. 解构</strong></p>
-<p>可以使用{}来对数组和对象进行解构。</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://img2020.cnblogs.com/blog/2248381/202104/2248381-20210414104144879-669596972.png" alt="image"></h2><p><img src="https://img2020.cnblogs.com/blog/2248381/202104/2248381-20210414104158304-1032889458.png" alt="image"></p>
-<p><strong>4. 函数的参数默认值</strong></p>
-<p>函数传参可以有默认值</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES6；</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printText</span>(<span class="params">text = <span class="string">&#x27;default&#x27;</span></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(text);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.Container</span> &#123; </span><br><span class="line">    <span class="attribute">background-color</span>: red; </span><br><span class="line">    <span class="attribute">overflow</span>: hidden; <span class="comment">/* creates a block formatting context */</span> </span><br><span class="line">&#125; </span><br><span class="line"><span class="selector-tag">p</span> &#123; </span><br><span class="line">    <span class="attribute">background-color</span>: lightgreen; </span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>5. Spread / Rest 操作符<code>...</code></strong></p>
-<p>Spread / Rest 操作符指的是 …，具体是 Spread 还是 Rest 需要看上下文语境。</p>
+<p>如上图所示：红色盒子（Container）中包含两个绿色的兄弟元素（P），并且红色盒子设置 overflow: hidden; 则一个BFC 已经被创建,即导致外边距折叠。</p>
+<p>理论上两个兄弟元素之间的边距应该是两个元素的边距之和（20px），但实际是 10px。这就是外边距折叠导致的。</p>
+<p>2.1 折叠外边距的值</p>
 <ul>
-<li>当被用于迭代器中时，它是一个 Spread 操作符：迭代器 (Iterator)是按照一定的顺序对一个或多个容 器 中的元素行进遍历的一种机制</li>
+<li>两个相邻的外边距都是 <strong>正数</strong> 时，折叠外边距是两者中较大的值。</li>
+<li>两个相邻的外边距都是 <strong>负数</strong> 时，折叠外边距是两者中绝对值较大的值。</li>
+<li>两个相邻的外边距是 <strong>一正一负</strong> 时，折叠外边距是两者相加的和。</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">x,y,z</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(x,y,z);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">foo(...arr); <span class="comment">// 1 2 3</span></span><br></pre></td></tr></table></figure>
+<p>2.2 <strong>外边距折叠的条件是 margin 必须相邻!</strong></p>
+<h3 id="3-避免外边距折叠"><a href="#3-避免外边距折叠" class="headerlink" title="3.避免外边距折叠"></a>3.避免外边距折叠</h3><p>这一听起来可能有些困惑，因为我们在前面讨论了 BFC 导致外边距折叠的问题。但我们必须记住的是<strong>外边距折叠（Margin collapsing）只会发生在属于同一BFC的块级元素之间</strong>。如果它们属于不同的 BFC，它们之间的外边距则不会折叠。所以通过<strong>创建一个不同的 BFC</strong> ，就可以避免外边距折叠。</p>
+<p>修改前面的例子并添加第三个兄弟元素，CSS不变。</p>
+<p>HTML</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;Container&quot;</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Sibling 1<span class="tag">&lt;/<span class="name">p</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Sibling 2<span class="tag">&lt;/<span class="name">p</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Sibling 3<span class="tag">&lt;/<span class="name">p</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>当被用于函数传参时，是一个 Rest 操作符：当被用于函数传参时，是一个 Rest 操作符：</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">...args</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(args);</span><br><span class="line">&#125;</span><br><span class="line">foo( <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>); <span class="comment">// [1, 2, 3, 4, 5]</span></span><br></pre></td></tr></table></figure>
+<p>结果不会改变，还会折叠外边距，三个兄弟元素（P）将会以垂直距离为 10px 的距离分开。原因是三个兄弟元素都属于同一个 BFC。</p>
+<p>创建一个不同的 BFC ，就可以避免外边距折叠。</p>
+<p>HTML</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;Container&quot;</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Sibling 1<span class="tag">&lt;/<span class="name">p</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Sibling 2<span class="tag">&lt;/<span class="name">p</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;newBFC&quot;</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Sibling 3<span class="tag">&lt;/<span class="name">p</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>6. 箭头函数</strong></p>
-<ul>
-<li>不需要 function 关键字来创建函数</li>
-<li>省略 return 关键字</li>
-<li>this始终指向函数申明时所在作用域下的this值(因为箭头函数没有自己的作用域，所以说一直指定上级的作用域)</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//es5</span></span><br><span class="line"><span class="keyword">var</span> fun = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//es6</span></span><br><span class="line"><span class="keyword">var</span> fn = <span class="function">() =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">1</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">x</span> : <span class="number">2</span>,</span><br><span class="line">    <span class="attr">say</span>: <span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.x)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">    <span class="attr">x</span> : <span class="number">2</span>,</span><br><span class="line">    <span class="function"><span class="title">say</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.x)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.say()  <span class="comment">//1</span></span><br><span class="line">obj1.say()  <span class="comment">//2</span></span><br></pre></td></tr></table></figure>
+<p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.Container</span> &#123; </span><br><span class="line">            <span class="attribute">background-color</span>: red; </span><br><span class="line">            <span class="attribute">overflow</span>: hidden; <span class="comment">/* creates a block formatting context */</span> </span><br><span class="line">&#125; </span><br><span class="line"><span class="selector-tag">p</span> &#123; </span><br><span class="line">            <span class="attribute">background-color</span>: lightgreen; </span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.newBFC</span> &#123; </span><br><span class="line">            <span class="attribute">overflow</span>: hidden; <span class="comment">/* creates new block formatting context */</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>7. for of</strong></p>
-<ul>
-<li>for of遍历的是键值对中的值</li>
-<li>for in遍历的是键值对中的键</li>
-</ul>
-<p><strong>8. class类</strong></p>
-<p>ES6 中支持 class 语法，不过，ES6的class不是新的对象继承模型，它只是原型链的语法糖表现形式。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;I&#x27;m a student.&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  <span class="function"><span class="title">study</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;study!&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">static</span> <span class="function"><span class="title">read</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;Reading Now.&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> Student); <span class="comment">// function</span></span><br><span class="line"><span class="keyword">let</span> stu = <span class="keyword">new</span> Student(); <span class="comment">// &quot;I&#x27;m a student.&quot;</span></span><br><span class="line">stu.study(); <span class="comment">// &quot;study!&quot;</span></span><br><span class="line">stu.read(); <span class="comment">// &quot;Reading Now.&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>9. 导入导出</strong></p>
-<ul>
-<li>导入improt</li>
-<li>导出export default</li>
-</ul>
-<p><strong>10. promise</strong></p>
-<p>Promise 用于更优雅地处理异步请求。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      resolve(<span class="string">&#x27;成功了！&#x27;</span>)</span><br><span class="line">    &#125;,<span class="number">1000</span>)</span><br><span class="line">    <span class="comment">// reject(&quot;失败了，wuwu&quot;)</span></span><br><span class="line">  &#125;).then(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">  &#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err)</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>11. async/await</strong></p>
-<p>比promise更好的解决了回调地狱。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  awiat fn()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>12. Symbol</strong></p>
-<p>新的基本类型</p>
-<p><strong>13. Set集合</strong></p>
-<p>存储任何类型的唯一值，即集合中所保存的元素是不重复的。类数组结构。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>]</span><br><span class="line"><span class="keyword">let</span> arrNew = <span class="keyword">new</span> <span class="built_in">Set</span>(arr)</span><br><span class="line">arrNew = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
-
-<p>类数组不是数组，要转化为数组<code>Array.form(arrNew)</code>这样arrNew才是数组了</p>
-<h3 id="Object-assign-target-source-1-···"><a href="#Object-assign-target-source-1-···" class="headerlink" title="Object.assign(target, source_1, ···)"></a>Object.assign(target, source_1, ···)</h3><p>用于将源对象的所有可枚举属性复制到目标对象中。</p>
-<h3 id="Object-is-value1-value2"><a href="#Object-is-value1-value2" class="headerlink" title="Object.is(value1, value2)"></a>Object.is(value1, value2)</h3><p>用来比较两个值是否严格相等，与（===）基本类似。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//一是+0不等于-0 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.is(+<span class="number">0</span>,-<span class="number">0</span>);  <span class="comment">//false </span></span><br><span class="line"></span><br><span class="line">+<span class="number">0</span> === -<span class="number">0</span>  <span class="comment">//true </span></span><br><span class="line"></span><br><span class="line"><span class="comment">//二是NaN等于本身 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.is(<span class="literal">NaN</span>,<span class="literal">NaN</span>); <span class="comment">//true </span></span><br><span class="line"></span><br><span class="line"><span class="literal">NaN</span> === <span class="literal">NaN</span>  <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
-
+<p><img src="https://segmentfault.com/img/bV5GGS?w=568&h=583" alt="避免外边距折叠"></p>
+<p>当第二和第三个兄弟元素属于不同的 BFC 时，它们之间就没有外边距折叠</p>
 
       
     </div>
@@ -463,11 +748,11 @@
 
 
   
-    <article id="post-新特性H5" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-计算机网络" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/03/22/%E6%96%B0%E7%89%B9%E6%80%A7H5/" class="article-date">
-      <time datetime="2022-03-22T10:48:20.222Z" itemprop="datePublished">2022-03-22</time>
+      <a href="/2022/03/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="article-date">
+      <time datetime="2022-03-23T04:57:51.715Z" itemprop="datePublished">2022-03-23</time>
 </a>
 
 
@@ -482,7 +767,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/22/%E6%96%B0%E7%89%B9%E6%80%A7H5/">H5的新特性</a>
+      <a class="article-title" href="/2022/03/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
     </h1>
   
 
@@ -492,40 +777,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <ul>
-<li><h5 id="新增选择器-document-querySelector、document-querySelectorAll"><a href="#新增选择器-document-querySelector、document-querySelectorAll" class="headerlink" title="新增选择器 document.querySelector、document.querySelectorAll"></a>新增选择器 document.querySelector、document.querySelectorAll</h5></li>
-<li><p>拖拽释放(Drag and drop) API</p>
-</li>
-<li><h5 id="媒体播放的-video-和-audio"><a href="#媒体播放的-video-和-audio" class="headerlink" title="媒体播放的 video 和 audio"></a>媒体播放的 video 和 audio</h5></li>
-<li><h5 id="本地存储-localStorage-和-sessionStorage"><a href="#本地存储-localStorage-和-sessionStorage" class="headerlink" title="本地存储 localStorage 和 sessionStorage"></a>本地存储 localStorage 和 sessionStorage</h5></li>
-<li><h5 id="离线应用-manifest"><a href="#离线应用-manifest" class="headerlink" title="离线应用 manifest"></a>离线应用 manifest</h5></li>
-<li><p>桌面通知 Notifications</p>
-</li>
-<li><h5 id="语意化标签-article、footer、header、nav、section"><a href="#语意化标签-article、footer、header、nav、section" class="headerlink" title="语意化标签 article、footer、header、nav、section"></a>语意化标签 article、footer、header、nav、section</h5></li>
-<li><p>增强表单控件 calendar、date、time、email、url、search</p>
-</li>
-<li><p>地理位置 Geolocation</p>
-</li>
-<li><p>多任务 webworker</p>
-</li>
-<li><p>全双工通信协议 websocket</p>
-</li>
-<li><p>历史管理 history</p>
-</li>
-<li><h5 id="跨域资源共享-CORS-Access-Control-Allow-Origin"><a href="#跨域资源共享-CORS-Access-Control-Allow-Origin" class="headerlink" title="跨域资源共享(CORS) Access-Control-Allow-Origin"></a>跨域资源共享(CORS) Access-Control-Allow-Origin</h5></li>
-<li><p>页面可见性改变事件 visibilitychange</p>
-</li>
-<li><p>跨窗口通信 PostMessage</p>
-</li>
-<li><p>Form Data 对象</p>
-</li>
-<li><h5 id="绘画-canvas"><a href="#绘画-canvas" class="headerlink" title="绘画 canvas"></a>绘画 canvas</h5></li>
-</ul>
-<p>H5移除的元素：</p>
-<ul>
-<li>纯表现的元素：basefont、big、center、font、s、strike、tt、u</li>
-<li>对可用性产生负面影响的元素：frame、frameset、noframes</li>
-</ul>
+        <h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220323125826130.png" alt="image-20220323125826130"></p>
+<h3 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h3><p><img src="C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220323125905041.png" alt="image-20220323125905041"></p>
 
       
     </div>
@@ -552,58 +805,11 @@
 
 
   
-    <article id="post-VUE_v-if和v-show" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-HTML_大类" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/03/22/VUE_v-if%E5%92%8Cv-show/" class="article-date">
-      <time datetime="2022-03-22T02:05:57.608Z" itemprop="datePublished">2022-03-22</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p> <strong>v-show<strong><strong>和</strong></strong>v-if****指令的共同点和不同点</strong></p>
-<p>·     v-show指令是通过修改元素的display的CSS属性让其显示或者隐藏</p>
-<p>·     v-if指令是直接销毁和重建DOM达到让元素显示和隐藏的效果</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-GET请求和POST请求的区别" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2022/03/21/GET%E8%AF%B7%E6%B1%82%E5%92%8CPOST%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8C%BA%E5%88%AB/" class="article-date">
-      <time datetime="2022-03-21T08:36:29.175Z" itemprop="datePublished">2022-03-21</time>
+      <a href="/2022/03/22/HTML_%E5%A4%A7%E7%B1%BB/" class="article-date">
+      <time datetime="2022-03-22T10:56:26.611Z" itemprop="datePublished">2022-03-22</time>
 </a>
 
 
@@ -618,7 +824,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/21/GET%E8%AF%B7%E6%B1%82%E5%92%8CPOST%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8C%BA%E5%88%AB/">GET请求和POST请求的区别</a>
+      <a class="article-title" href="/2022/03/22/HTML_%E5%A4%A7%E7%B1%BB/">HTML_大类</a>
     </h1>
   
 
@@ -628,17 +834,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h4 id="1-语义："><a href="#1-语义：" class="headerlink" title="1 语义："></a>1 语义：</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET一般是获取数据或资源 POST提交数据给服务器</span><br></pre></td></tr></table></figure>
+        <h4 id="⾏内元素有哪些？块级元素有哪些？-空-void-元素有那些？⾏内元-素和块级元素有什么区别？"><a href="#⾏内元素有哪些？块级元素有哪些？-空-void-元素有那些？⾏内元-素和块级元素有什么区别？" class="headerlink" title="⾏内元素有哪些？块级元素有哪些？ 空(void)元素有那些？⾏内元 素和块级元素有什么区别？"></a>⾏内元素有哪些？块级元素有哪些？ 空(void)元素有那些？⾏内元 素和块级元素有什么区别？</h4><p>⾏内元素有： a b span img input select strong </p>
+<p>块级元素有： div ul ol li dl dt dd h1 h2 h3 h4… p</p>
+<p>空元素： br hr link input meta img</p>
+<p>⾏内元素不可以设置宽⾼，不独占⼀⾏ </p>
+<p>块级元素可以设置宽⾼，独占⼀⾏</p>
+<h4 id="伪类和伪元素"><a href="#伪类和伪元素" class="headerlink" title="伪类和伪元素"></a>伪类和伪元素</h4><p><strong>参考答案：</strong></p>
+<p>伪类：用于已有元素处于某种状态时为其添加对应的样式，这个状态是根据用户行为而动态变化的。</p>
+<p>例如：当用户悬停在指定元素时，可以通过:hover来描述这个元素的状态，虽然它和一般css相似，可以为 已有元素添加样式，但是它只有处于DOM树无法描述的状态下才能为元素添加样式，所以称为伪类。</p>
+<p>伪元素：用于创建一些不在DOM树中的元素，并为其添加样式。</p>
+<p>例如，我们可以通过:before来在一个元素之前添加一些文本，并为这些文本添加样式，虽然用户可以看见 这些文本，但是它实际上并不在DOM文档中。</p>
 
-<h4 id="2-参数："><a href="#2-参数：" class="headerlink" title="2 参数："></a>2 参数：</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET请求通过queryString形式携带参数，在地址栏后面拼接 不在请求体里</span><br><span class="line">POST请求通过requestBody携带参数，地址栏里没有</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-数据量："><a href="#3-数据量：" class="headerlink" title="3 数据量："></a>3 数据量：</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET理论上无限，受浏览器的地址栏限制 IE 2kb</span><br><span class="line">POST理论上无限，受服务器限制</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-安全性："><a href="#4-安全性：" class="headerlink" title="4 安全性："></a>4 安全性：</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET相对不安全</span><br><span class="line">POST相对安全</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-缓存："><a href="#5-缓存：" class="headerlink" title="5 缓存："></a>5 缓存：</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET会被浏览器主动缓存</span><br><span class="line">POST需要手动设置</span><br></pre></td></tr></table></figure>
-
-<h4 id="6-数据格式："><a href="#6-数据格式：" class="headerlink" title="6 数据格式："></a>6 数据格式：</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET请求只能发送url编码的数据</span><br><span class="line">POST可以发送任意格式的数据，和content-type匹配</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -664,11 +870,11 @@
 
 
   
-    <article id="post-JS_数组去重" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JS_大类" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/03/21/JS_%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" class="article-date">
-      <time datetime="2022-03-21T08:13:52.282Z" itemprop="datePublished">2022-03-21</time>
+      <a href="/2022/03/22/JS_%E5%A4%A7%E7%B1%BB/" class="article-date">
+      <time datetime="2022-03-22T10:56:18.739Z" itemprop="datePublished">2022-03-22</time>
 </a>
 
 
@@ -683,7 +889,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/21/JS_%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/">JS_数组去重</a>
+      <a class="article-title" href="/2022/03/22/JS_%E5%A4%A7%E7%B1%BB/">JS_大类</a>
     </h1>
   
 
@@ -693,25 +899,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>文章来源：<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000016418021?utm_source=tag-newest">https://segmentfault.com/a/1190000016418021?utm_source=tag-newest</a></p>
-<h2 id="一、利用ES6-Set去重（ES6中最常用）"><a href="#一、利用ES6-Set去重（ES6中最常用）" class="headerlink" title="一、利用ES6 Set去重（ES6中最常用）"></a>一、利用ES6 Set去重（ES6中最常用）</h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="keyword">unique</span> (arr) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">Array</span>.<span class="keyword">from</span>(<span class="built_in">new</span> <span class="keyword">Set</span>(arr))</span><br><span class="line">&#125;</span><br><span class="line">var arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;true&#x27;</span>,<span class="string">&#x27;true&#x27;</span>,<span class="keyword">true</span>,<span class="keyword">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="keyword">false</span>,<span class="keyword">false</span>, undefined,undefined, <span class="keyword">null</span>,<span class="keyword">null</span>, <span class="keyword">NaN</span>, <span class="keyword">NaN</span>,<span class="string">&#x27;NaN&#x27;</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;a&#x27;</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line">console.log(<span class="keyword">unique</span>(arr))</span><br><span class="line"> //[<span class="number">1</span>, &quot;true&quot;, <span class="keyword">true</span>, <span class="number">15</span>, <span class="keyword">false</span>, undefined, <span class="keyword">null</span>, <span class="keyword">NaN</span>, &quot;NaN&quot;, <span class="number">0</span>, &quot;a&quot;, &#123;&#125;, &#123;&#125;]</span><br></pre></td></tr></table></figure>
-
-<p>不考虑兼容性，这种去重的方法代码最少。这种方法还无法去掉“{}”空对象，后面的高阶方法会添加去掉重复“{}”的方法</p>
-<p>[…new Set(arr)]<br>//代码就是这么少—-</p>
-<h2 id="二、利用for嵌套for，然后splice去重（ES5中最常用）"><a href="#二、利用for嵌套for，然后splice去重（ES5中最常用）" class="headerlink" title="二、利用for嵌套for，然后splice去重（ES5中最常用）"></a>二、利用for嵌套for，然后splice去重（ES5中最常用）</h2><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>)</span>&#123;            </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;arr.length; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> j=i+<span class="number">1</span>; j&lt;arr.length; j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(arr[i]==arr[j])&#123;         <span class="comment">//第一个等同于第二个，splice方法删除第二个</span></span><br><span class="line">                    arr.splice(j,<span class="number">1</span>);</span><br><span class="line">                    j--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;true&#x27;</span>,<span class="string">&#x27;true&#x27;</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">&#x27;NaN&#x27;</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;a&#x27;</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line">    console.log(unique(arr))</span><br><span class="line">    <span class="comment">//[1, &quot;true&quot;, 15, false, undefined, NaN, NaN, &quot;NaN&quot;, &quot;a&quot;, &#123;…&#125;, &#123;…&#125;]     //NaN和&#123;&#125;没有去重，两个null直接消失了</span></span><br></pre></td></tr></table></figure>
-
-<p>双层循环，外层循环元素，内层循环时比较值。值相同时，则删去这个值。</p>
-<h2 id="三、利用indexOf去重"><a href="#三、利用indexOf去重" class="headerlink" title="三、利用indexOf去重"></a>三、利用indexOf去重</h2><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!Array.isArray(arr)) &#123;</span><br><span class="line">        console.log(<span class="string">&#x27;type error!&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> array = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (array .indexOf(arr[i]) === <span class="number">-1</span>) &#123;</span><br><span class="line">            array .push(arr[i])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;true&#x27;</span>,<span class="string">&#x27;true&#x27;</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">&#x27;NaN&#x27;</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;a&#x27;</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line">console.log(unique(arr))</span><br><span class="line">   <span class="comment">// [1, &quot;true&quot;, true, 15, false, undefined, null, NaN, NaN, &quot;NaN&quot;, 0, &quot;a&quot;, &#123;…&#125;, &#123;…&#125;]  //NaN、&#123;&#125;没有去重</span></span><br></pre></td></tr></table></figure>
-
-<p>新建一个空的结果数组，for 循环原数组，判断结果数组是否存在当前元素，如果有相同的值则跳过，不相同则push进数组。</p>
-<h2 id="四、利用sort"><a href="#四、利用sort" class="headerlink" title="四、利用sort()"></a>四、利用sort()</h2><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!Array.isArray(arr)) &#123;</span><br><span class="line">        console.log(<span class="string">&#x27;type error!&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    arr = arr.sort()</span><br><span class="line">    <span class="keyword">var</span> arrry= [arr[<span class="number">0</span>]];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[i] !== arr[i<span class="number">-1</span>]) &#123;</span><br><span class="line">            arrry.push(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arrry;</span><br><span class="line">&#125;</span><br><span class="line">     <span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;true&#x27;</span>,<span class="string">&#x27;true&#x27;</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">&#x27;NaN&#x27;</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;a&#x27;</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line">        console.log(unique(arr))</span><br><span class="line"><span class="comment">// [0, 1, 15, &quot;NaN&quot;, NaN, NaN, &#123;…&#125;, &#123;…&#125;, &quot;a&quot;, false, null, true, &quot;true&quot;, undefined]      //NaN、&#123;&#125;没有去重</span></span><br></pre></td></tr></table></figure>
-
-<p>利用sort()排序方法，然后根据排序后的结果进行遍历及相邻元素比对</p>
-<h2 id="五、利用includes-和indexof原理一样"><a href="#五、利用includes-和indexof原理一样" class="headerlink" title="五、利用includes(和indexof原理一样)"></a>五、利用includes(和indexof原理一样)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">Array</span>.isArray(arr)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;type error!&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> array =[];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>( !array.includes( arr[i]) ) &#123;<span class="comment">//includes 检测数组是否有某个值</span></span><br><span class="line">                    array.push(arr[i]);</span><br><span class="line">              &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;true&#x27;</span>,<span class="string">&#x27;true&#x27;</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">&#x27;NaN&#x27;</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;a&#x27;</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line">    <span class="built_in">console</span>.log(unique(arr))</span><br><span class="line">    <span class="comment">//[1, &quot;true&quot;, true, 15, false, undefined, null, NaN, &quot;NaN&quot;, 0, &quot;a&quot;, &#123;…&#125;, &#123;…&#125;]     //&#123;&#125;没有去重</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="六、利用filter"><a href="#六、利用filter" class="headerlink" title="六、利用filter"></a>六、利用filter</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, arr</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//当前元素，在原始数组中的第一个索引==当前索引值，否则返回当前元素</span></span><br><span class="line">    <span class="keyword">return</span> arr.indexOf(item, <span class="number">0</span>) === index;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;true&#x27;</span>,<span class="string">&#x27;true&#x27;</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">&#x27;NaN&#x27;</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;a&#x27;</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line">        <span class="built_in">console</span>.log(unique(arr))</span><br><span class="line"><span class="comment">//[1, &quot;true&quot;, true, 15, false, undefined, null, &quot;NaN&quot;, 0, &quot;a&quot;, &#123;…&#125;, &#123;…&#125;]</span></span><br></pre></td></tr></table></figure>
+        
       
     </div>
     
@@ -737,11 +925,11 @@
 
 
   
-    <article id="post-CSS_清除浮动的方法" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-CSS_大类" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/03/21/CSS_%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%96%B9%E6%B3%95/" class="article-date">
-      <time datetime="2022-03-21T07:15:50.718Z" itemprop="datePublished">2022-03-21</time>
+      <a href="/2022/03/22/CSS_%E5%A4%A7%E7%B1%BB/" class="article-date">
+      <time datetime="2022-03-22T10:55:59.345Z" itemprop="datePublished">2022-03-22</time>
 </a>
 
 
@@ -756,7 +944,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/21/CSS_%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%96%B9%E6%B3%95/">CSS_清除浮动</a>
+      <a class="article-title" href="/2022/03/22/CSS_%E5%A4%A7%E7%B1%BB/">CSS_大类</a>
     </h1>
   
 
@@ -766,204 +954,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h4 id="一、父级添加overflow-hidden；"><a href="#一、父级添加overflow-hidden；" class="headerlink" title="一、父级添加overflow: hidden；"></a>一、父级添加overflow: hidden；</h4><p>　　　子元素浮动了，会造成父元素的高度坍塌。只要给父元素添加overflow: hidden;属性，就可以解决浮动带来的影响。</p>
-<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul class=&quot;cc&quot;&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    li &#123;</span><br><span class="line">        list-style: none;</span><br><span class="line">        height: 100px;</span><br><span class="line">        width: 100px;</span><br><span class="line">        float: left;</span><br><span class="line">        background: red;</span><br><span class="line">        margin-left: 20px;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    ul &#123;</span><br><span class="line">        overflow: hidden;</span><br><span class="line">        padding: 0;</span><br><span class="line">        margin: 0;</span><br><span class="line">        background: pink;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span> &#123;<span class="attribute">color</span>:<span class="number">#FF0000</span>;&#125; <span class="comment">/* 未访问的链接 */</span> *</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span> &#123;<span class="attribute">color</span>:<span class="number">#00FF00</span>;&#125; <span class="comment">/* 已访问的链接 */</span> *</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;<span class="attribute">color</span>:<span class="number">#FF00FF</span>;&#125; <span class="comment">/* 鼠标划过链接 */</span>*</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:active</span> &#123;<span class="attribute">color</span>:<span class="number">#0000FF</span>;&#125; <span class="comment">/* 已选中的链接 */</span></span><br></pre></td></tr></table></figure>
 
-<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
-<h4 id="二、通过属性clear-both-达到清除浮动的目的；"><a href="#二、通过属性clear-both-达到清除浮动的目的；" class="headerlink" title="二、通过属性clear:both;达到清除浮动的目的；"></a>二、通过属性clear:both;达到清除浮动的目的；</h4><p>　　元素浮动后，只需要在浮动元素添加多一个块级元素，并添加clear: both;属性，便可以达到清除浮动的目的。</p>
-<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    li &#123;</span><br><span class="line">        list-style: none;</span><br><span class="line">        height: 100px;</span><br><span class="line">        width: 100px;</span><br><span class="line">        float: left;</span><br><span class="line">        background: red;</span><br><span class="line">        margin-left: 20px;</span><br><span class="line">    &#125;</span><br><span class="line">    ul&#123;</span><br><span class="line">        background: pink;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;ul class=&quot;cc&quot;&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;div style=&quot;clear: both;&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-
-<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
-<h4 id="三、通过给父级元素添加伪类after，达到清除浮动的目的；"><a href="#三、通过给父级元素添加伪类after，达到清除浮动的目的；" class="headerlink" title="三、通过给父级元素添加伪类after，达到清除浮动的目的；"></a>三、通过给父级元素添加伪类after，达到清除浮动的目的；</h4><p>　　这种方式也是使用clear: both;的方式达到效果，只是变相的使用了伪类after，使得页面结构更简洁，也是常用的清理浮动的方式。</p>
-<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    li &#123;</span><br><span class="line">        list-style: none;</span><br><span class="line">        height: 100px;</span><br><span class="line">        width: 100px;</span><br><span class="line">        float: left;</span><br><span class="line">        background: red;</span><br><span class="line">        margin-left: 20px;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .cc:after &#123;</span><br><span class="line">        content: &#x27;&#x27;;</span><br><span class="line">        height: 0;</span><br><span class="line">        line-height: 0;</span><br><span class="line">        display: block;</span><br><span class="line">        visibility: hidden;</span><br><span class="line">        clear: both;</span><br><span class="line">    &#125;</span><br><span class="line">    ul&#123;</span><br><span class="line">        background: pink;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;ul class=&quot;cc&quot;&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-
-<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
-<h4 id="四、使用双伪类；"><a href="#四、使用双伪类；" class="headerlink" title="四、使用双伪类；"></a>四、使用双伪类；</h4><p>　　此方式和三原理一样，代码更简洁。</p>
-<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    li &#123;</span><br><span class="line">        list-style: none;</span><br><span class="line">        height: 100px;</span><br><span class="line">        width: 100px;</span><br><span class="line">        float: left;</span><br><span class="line">        background: red;</span><br><span class="line">        margin-left: 20px;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    .cc:after,</span><br><span class="line">    .cc:before &#123;</span><br><span class="line">        content: &quot;&quot;;</span><br><span class="line">        display: block;</span><br><span class="line">        clear: both;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    ul &#123;</span><br><span class="line">        background: pink;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;ul class=&quot;cc&quot;&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-CSS_行内元素和块级元素" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2022/03/21/CSS_%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8C%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" class="article-date">
-      <time datetime="2022-03-21T06:52:31.362Z" itemprop="datePublished">2022-03-21</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/21/CSS_%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8C%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/">CSS_行内元素和块级元素</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><strong>块级元素</strong></p>
-<p><strong>会独占一行,默认情况下,其宽度自动填满其父元素宽度</strong></p>
-<p><strong>块级元素可以设置width,height属性.</strong></p>
-<p><strong>块级元素即使设置了宽度,仍然是独占一行.</strong></p>
-<p><strong>块级元素可以设置margin和padding属性.</strong></p>
-<p><strong>块级元素对应于display:block.</strong></p>
-<p><strong>——————————————————————————————</strong></p>
-<p><strong>行内元素</strong></p>
-<p><strong>不会独占一行,相邻的行内元素会排列在同一行里,直到一行排不下,才会换行</strong></p>
-<p><strong>行内元素设置width,height属性无效，它的长度高度主要根据内容决定.</strong></p>
-<p><strong>行内元素的margin和padding属性,水平方向的padding-left,padding-right,margin-left,margin- right都产生边距效果,但竖直方向的padding-top,padding-bottom,margin-top,margin-bottom却不 会产生边距效果.</strong></p>
-<hr>
-<h4 id="文本级标签：p-span-a-b-i-u-em"><a href="#文本级标签：p-span-a-b-i-u-em" class="headerlink" title="文本级标签：p , span , a , b , i , u , em"></a>文本级标签：p , span , a , b , i , u , em</h4><h4 id="容器级标签：div-h系列-li-dt-dd"><a href="#容器级标签：div-h系列-li-dt-dd" class="headerlink" title="容器级标签：div , h系列 , li , dt ,dd"></a>容器级标签：div , h系列 , li , dt ,dd</h4>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-浏览器内核" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2022/03/21/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" class="article-date">
-      <time datetime="2022-03-21T06:34:11.883Z" itemprop="datePublished">2022-03-21</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/21/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/">浏览器内核</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="因为浏览器太多啦，-但是现在主要流行的就是下面几个："><a href="#因为浏览器太多啦，-但是现在主要流行的就是下面几个：" class="headerlink" title="因为浏览器太多啦， 但是现在主要流行的就是下面几个："></a>因为浏览器太多啦， 但是现在主要流行的就是下面几个：</h2><h5 id="IE-Trident-IE、猎豹安全、360极速浏览器、百度浏览器"><a href="#IE-Trident-IE、猎豹安全、360极速浏览器、百度浏览器" class="headerlink" title="IE    Trident    IE、猎豹安全、360极速浏览器、百度浏览器"></a>IE    Trident    IE、猎豹安全、360极速浏览器、百度浏览器</h5><h5 id="firefox-Gecko-可惜这几年已经没落了，打开速度慢、升级频繁、猪一样的队友flash、神一样的对手chrome。"><a href="#firefox-Gecko-可惜这几年已经没落了，打开速度慢、升级频繁、猪一样的队友flash、神一样的对手chrome。" class="headerlink" title="firefox    Gecko    可惜这几年已经没落了，打开速度慢、升级频繁、猪一样的队友flash、神一样的对手chrome。"></a>firefox    Gecko    可惜这几年已经没落了，打开速度慢、升级频繁、猪一样的队友flash、神一样的对手chrome。</h5><h5 id="Safari-webkit-从Safari推出之时起，它的渲染引擎就是Webkit，一提到-webkit，首先想到的便是-chrome，可以说，chrome-将-Webkit内核-深入人心，殊不知，Webkit-的鼻祖其实是-Safari。"><a href="#Safari-webkit-从Safari推出之时起，它的渲染引擎就是Webkit，一提到-webkit，首先想到的便是-chrome，可以说，chrome-将-Webkit内核-深入人心，殊不知，Webkit-的鼻祖其实是-Safari。" class="headerlink" title="Safari    webkit    从Safari推出之时起，它的渲染引擎就是Webkit，一提到 webkit，首先想到的便是 chrome，可以说，chrome 将 Webkit内核 深入人心，殊不知，Webkit 的鼻祖其实是 Safari。"></a>Safari    webkit    从Safari推出之时起，它的渲染引擎就是Webkit，一提到 webkit，首先想到的便是 chrome，可以说，chrome 将 Webkit内核 深入人心，殊不知，Webkit 的鼻祖其实是 Safari。</h5><h5 id="chrome-Chromium-Blink-在-Chromium-项目中研发-Blink-渲染引擎（即浏览器核心），内置于-Chrome-浏览器之中。Blink-其实是-WebKit-的分支。大部分国产浏览器最新版都采用Blink内核。二次开发"><a href="#chrome-Chromium-Blink-在-Chromium-项目中研发-Blink-渲染引擎（即浏览器核心），内置于-Chrome-浏览器之中。Blink-其实是-WebKit-的分支。大部分国产浏览器最新版都采用Blink内核。二次开发" class="headerlink" title="chrome    Chromium/Blink    在 Chromium 项目中研发 Blink 渲染引擎（即浏览器核心），内置于 Chrome 浏览器之中。Blink 其实是 WebKit 的分支。大部分国产浏览器最新版都采用Blink内核。二次开发"></a>chrome    Chromium/Blink    在 Chromium 项目中研发 Blink 渲染引擎（即浏览器核心），内置于 Chrome 浏览器之中。Blink 其实是 WebKit 的分支。大部分国产浏览器最新版都采用Blink内核。二次开发</h5><h5 id="Opera-blink-现在跟随chrome用blink内核。"><a href="#Opera-blink-现在跟随chrome用blink内核。" class="headerlink" title="Opera    blink    现在跟随chrome用blink内核。"></a>Opera    blink    现在跟随chrome用blink内核。</h5><h4 id=""><a href="#" class="headerlink" title=""></a></h4>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-CSS_rem与em" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2022/03/21/CSS_rem%E4%B8%8Eem/" class="article-date">
-      <time datetime="2022-03-21T06:26:21.162Z" itemprop="datePublished">2022-03-21</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/21/CSS_rem%E4%B8%8Eem/">CSS_rem与em</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="font-size"><a href="#font-size" class="headerlink" title="font-size"></a>font-size</h3><h4 id="rem-单位如何转换为像素值"><a href="#rem-单位如何转换为像素值" class="headerlink" title="rem 单位如何转换为像素值**"></a>rem 单位如何转换为像素值**</h4><p>当使用 rem 单位，他们转化为像素大小取决于页根元素的字体大小，即 html 元素的字体大小。 根元素字体大小乘以你 rem 值。</p>
-<p>例如，根元素的字体大小 16px，10rem 将等同于 160px，即 10 x 16 = 160。</p>
-<h4 id="em-单位如何转换为像素值"><a href="#em-单位如何转换为像素值" class="headerlink" title="em 单位如何转换为像素值"></a><strong>em 单位如何转换为像素值</strong></h4><p>em转化为像素，大小取决于自身父级元素所设置的px值。父级元素字体大小乘以em值。(继承父级而来，但是本身有font-size那么就按照这个大小来)</p>
-<p>例如，父级元素字体大小为13px,10em将等同于130px,即13x10 = 130px。</p>
 
       
     </div>
@@ -992,7 +984,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
     </nav>
   
 </div>

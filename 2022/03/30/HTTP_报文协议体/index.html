@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="John Doe" />
+
+
+
+<meta name="description" content="HTTP请求报文一个HTTP请求报文由四个部分组成：请求行、请求头部、空行、请求数据。1.请求行 请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔。比如 GET &#x2F;data&#x2F;info.html HTTP&#x2F;1.1方法字段就是HTTP使用的请求方法，比如常见的GET&#x2F;POST其中HTTP协议版本有两种：HTTP1.0&#x2F;HTTP1.1 可以这样区别：HTTP1.0对于每">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP_报文体">
+<meta property="og:url" content="http://example.com/2022/03/30/HTTP_%E6%8A%A5%E6%96%87%E5%8D%8F%E8%AE%AE%E4%BD%93/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="HTTP请求报文一个HTTP请求报文由四个部分组成：请求行、请求头部、空行、请求数据。1.请求行 请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔。比如 GET &#x2F;data&#x2F;info.html HTTP&#x2F;1.1方法字段就是HTTP使用的请求方法，比如常见的GET&#x2F;POST其中HTTP协议版本有两种：HTTP1.0&#x2F;HTTP1.1 可以这样区别：HTTP1.0对于每">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-30T12:44:05.591Z">
+<meta property="article:modified_time" content="2022-03-30T12:57:10.378Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>HTTP_报文体 | Hexo</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: 
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/head.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/"></a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menu</li>
+                        <li>Tags</li>
+                        
+                        <li>Friends</li>
+                        
+                        
+                        <li>About Me</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="/2684047674@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" rel="noopener" href="https://github.com/Dijgory" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/" rel="tag">JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/" rel="tag">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页"></a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/head.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页"></a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="/2684047674@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/Dijgory" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-HTTP_报文协议体" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/30/HTTP_%E6%8A%A5%E6%96%87%E5%8D%8F%E8%AE%AE%E4%BD%93/" class="article-date">
+      <time datetime="2022-03-30T12:44:05.591Z" itemprop="datePublished">2022-03-30</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HTTP_报文体
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="HTTP请求报文"><a href="#HTTP请求报文" class="headerlink" title="HTTP请求报文"></a>HTTP请求报文</h2><p>一个HTTP请求报文由四个部分组成：请求行、请求头部、空行、请求数据。<br>1.请求行</p>
+<h4 id="请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔。比如-GET-data-info-html-HTTP-1-1"><a href="#请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔。比如-GET-data-info-html-HTTP-1-1" class="headerlink" title="请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔。比如 GET /data/info.html HTTP/1.1"></a>请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔。比如 GET /data/info.html HTTP/1.1</h4><h4 id="方法字段就是HTTP使用的请求方法，比如常见的GET-POST"><a href="#方法字段就是HTTP使用的请求方法，比如常见的GET-POST" class="headerlink" title="方法字段就是HTTP使用的请求方法，比如常见的GET/POST"></a>方法字段就是HTTP使用的请求方法，比如常见的GET/POST</h4><h4 id="其中HTTP协议版本有两种：HTTP1-0-HTTP1-1-可以这样区别："><a href="#其中HTTP协议版本有两种：HTTP1-0-HTTP1-1-可以这样区别：" class="headerlink" title="其中HTTP协议版本有两种：HTTP1.0/HTTP1.1 可以这样区别："></a>其中HTTP协议版本有两种：HTTP1.0/HTTP1.1 可以这样区别：</h4><h4 id="HTTP1-0对于每个连接都只能传送一个请求和响应，请求就会关闭，HTTP1-0没有Host字段-而HTTP1-1在同一个连接中可以传送多个请求和响应，多个请求可以重叠和同时进行，HTTP1-1必须有Host字段。"><a href="#HTTP1-0对于每个连接都只能传送一个请求和响应，请求就会关闭，HTTP1-0没有Host字段-而HTTP1-1在同一个连接中可以传送多个请求和响应，多个请求可以重叠和同时进行，HTTP1-1必须有Host字段。" class="headerlink" title="HTTP1.0对于每个连接都只能传送一个请求和响应，请求就会关闭，HTTP1.0没有Host字段;而HTTP1.1在同一个连接中可以传送多个请求和响应，多个请求可以重叠和同时进行，HTTP1.1必须有Host字段。"></a>HTTP1.0对于每个连接都只能传送一个请求和响应，请求就会关闭，HTTP1.0没有Host字段;而HTTP1.1在同一个连接中可以传送多个请求和响应，多个请求可以重叠和同时进行，HTTP1.1必须有Host字段。</h4><p>2.请求头部<br>HTTP客户程序(例如浏览器)，向服务器发送请求的时候必须指明请求类型(一般是GET或者 POST)。如有必要，客户程序还可以选择发送其他的请求头。大多数请求头并不是必需的，但Content-Length除外。对于POST请求来说 Content-Length必须出现。<br>常见的请求头字段含义：<br>Accept： 浏览器可接受的MIME类型。<br>Accept-Charset：浏览器可接受的字符集。<br>Accept-Encoding：浏览器能够进行解码的数据编码方式，比如gzip。Servlet能够向支持gzip的浏览器返回经gzip编码的HTML页面。许多情形下这可以减少5到10倍的下载时间。<br>Accept-Language：浏览器所希望的语言种类，当服务器能够提供一种以上的语言版本时要用到。<br>Authorization：授权信息，通常出现在对服务器发送的WWW-Authenticate头的应答中。</p>
+<h4 id="Content-Length：表示请求消息正文的长度。"><a href="#Content-Length：表示请求消息正文的长度。" class="headerlink" title="Content-Length：表示请求消息正文的长度。"></a>Content-Length：表示请求消息正文的长度。</h4><h4 id="Host：-客户机通过这个头告诉服务器，想访问的主机名。Host头域指定请求资源的Intenet主机和端口号，必须表示请求url的原始服务器或网关的位置。HTTP-1-1请求必须包含主机头域，否则系统会以400状态码返回。"><a href="#Host：-客户机通过这个头告诉服务器，想访问的主机名。Host头域指定请求资源的Intenet主机和端口号，必须表示请求url的原始服务器或网关的位置。HTTP-1-1请求必须包含主机头域，否则系统会以400状态码返回。" class="headerlink" title="Host： 客户机通过这个头告诉服务器，想访问的主机名。Host头域指定请求资源的Intenet主机和端口号，必须表示请求url的原始服务器或网关的位置。HTTP/1.1请求必须包含主机头域，否则系统会以400状态码返回。"></a>Host： 客户机通过这个头告诉服务器，想访问的主机名。Host头域指定请求资源的Intenet主机和端口号，必须表示请求url的原始服务器或网关的位置。HTTP/1.1请求必须包含主机头域，否则系统会以400状态码返回。</h4><p>If-Modified-Since：客户机通过这个头告诉服务器，资源的缓存时间。只有当所请求的内容在指定的时间后又经过修改才返回它，否则返回304“Not Modified”应答。<br>Referer：客户机通过这个头告诉服务器，它是从哪个资源来访问服务器的(防盗链)。包含一个URL，用户从该URL代表的页面出发访问当前请求的页面。<br>User-Agent：User-Agent头域的内容包含发出请求的用户信息。浏览器类型，如果Servlet返回的内容与浏览器类型有关则该值非常有用。</p>
+<h4 id="Cookie：客户机通过这个头可以向服务器带数据，这是最重要的请求头信息之一。"><a href="#Cookie：客户机通过这个头可以向服务器带数据，这是最重要的请求头信息之一。" class="headerlink" title="Cookie：客户机通过这个头可以向服务器带数据，这是最重要的请求头信息之一。"></a>Cookie：客户机通过这个头可以向服务器带数据，这是最重要的请求头信息之一。</h4><p>Pragma：指定“no-cache”值表示服务器必须返回一个刷新后的文档，即使它是代理服务器而且已经有了页面的本地拷贝。<br>From：请求发送者的email地址，由一些特殊的Web客户程序使用，浏览器不会用到它。</p>
+<h4 id="Connection：处理完这次请求后是否断开连接还是继续保持连接。如果Servlet看到这里的值为“Keep-Alive”，或者看到请求使用的是HTTP-1-1-HTTP-1-1默认进行持久连接-，它就可以利用持久连接的优点，当页面包含多个元素时-例如Applet，图片-，显著地减少下载所需要的时间。要实现这一点，Servlet需要在应答中发送一个Content-Length头，最简单的实现方法是：先把内容写入-ByteArrayOutputStream，然后在正式写出内容之前计算它的大小。"><a href="#Connection：处理完这次请求后是否断开连接还是继续保持连接。如果Servlet看到这里的值为“Keep-Alive”，或者看到请求使用的是HTTP-1-1-HTTP-1-1默认进行持久连接-，它就可以利用持久连接的优点，当页面包含多个元素时-例如Applet，图片-，显著地减少下载所需要的时间。要实现这一点，Servlet需要在应答中发送一个Content-Length头，最简单的实现方法是：先把内容写入-ByteArrayOutputStream，然后在正式写出内容之前计算它的大小。" class="headerlink" title="Connection：处理完这次请求后是否断开连接还是继续保持连接。如果Servlet看到这里的值为“Keep- Alive”，或者看到请求使用的是HTTP 1.1(HTTP 1.1默认进行持久连接)，它就可以利用持久连接的优点，当页面包含多个元素时(例如Applet，图片)，显著地减少下载所需要的时间。要实现这一点，Servlet需要在应答中发送一个Content-Length头，最简单的实现方法是：先把内容写入 ByteArrayOutputStream，然后在正式写出内容之前计算它的大小。"></a>Connection：处理完这次请求后是否断开连接还是继续保持连接。如果Servlet看到这里的值为“Keep- Alive”，或者看到请求使用的是HTTP 1.1(HTTP 1.1默认进行持久连接)，它就可以利用持久连接的优点，当页面包含多个元素时(例如Applet，图片)，显著地减少下载所需要的时间。要实现这一点，Servlet需要在应答中发送一个Content-Length头，最简单的实现方法是：先把内容写入 ByteArrayOutputStream，然后在正式写出内容之前计算它的大小。</h4><p>Range：Range头域可以请求实体的一个或者多个子范围。例如，<br>表示头500个字节：bytes=0-499<br>表示第二个500字节：bytes=500-999<br>表示最后500个字节：bytes=-500<br>表示500字节以后的范围：bytes=500-<br>第一个和最后一个字节：bytes=0-0,-1<br>同时指定几个范围：bytes=500-600,601-999<br>但是服务器可以忽略此请求头，如果无条件GET包含Range请求头，响应会以状态码206(PartialContent)返回而不是以200 (OK)。<br>UA-Pixels，UA-Color，UA-OS，UA-CPU：由某些版本的IE浏览器所发送的非标准的请求头，表示屏幕大小、颜色深度、操作系统和CPU类型。<br>3.空行<br>它的作用是通过一个空行，告诉服务器请求头部到此为止。<br>4.请求数据<br>若方法字段是GET，则此项为空，没有数据<br>若方法字段是POST,则通常来说此处放置的就是要提交的数据<br>比如要使用POST方法提交一个表单，其中有user字段中数据为“admin”, password字段为123456，那么这里的请求数据就是 user=admin&amp;password=123456，使用&amp;来连接各个字段。<br>总的来说，HTTP请求报文格式就如下图所示</p>
+<p>上面是POST方法，它的请求行URL段中一般是没有参数的，参数放在了报文体中。而GET方法的参数直接置于请求行URL中，报文体则为空。</p>
+<h2 id="HTTP响应报文"><a href="#HTTP响应报文" class="headerlink" title="HTTP响应报文"></a>HTTP响应报文</h2><h4 id="同样的，HTTP响应报文也由三部分组成：响应行、响应头、响应体"><a href="#同样的，HTTP响应报文也由三部分组成：响应行、响应头、响应体" class="headerlink" title="同样的，HTTP响应报文也由三部分组成：响应行、响应头、响应体"></a>同样的，HTTP响应报文也由三部分组成：响应行、响应头、响应体</h4><h3 id="1-响应行"><a href="#1-响应行" class="headerlink" title="1.响应行"></a>1.响应行</h3><h4 id="响应行一般由协议版本、状态码及其描述组成-比如-HTTP-1-1-200-OK"><a href="#响应行一般由协议版本、状态码及其描述组成-比如-HTTP-1-1-200-OK" class="headerlink" title="响应行一般由协议版本、状态码及其描述组成 比如 HTTP/1.1 200 OK"></a>响应行一般由协议版本、状态码及其描述组成 比如 HTTP/1.1 200 OK</h4><h4 id="其中协议版本HTTP-1-1或者HTTP-1-0，200就是它的状态码，OK则为它的描述。"><a href="#其中协议版本HTTP-1-1或者HTTP-1-0，200就是它的状态码，OK则为它的描述。" class="headerlink" title="其中协议版本HTTP/1.1或者HTTP/1.0，200就是它的状态码，OK则为它的描述。"></a>其中协议版本HTTP/1.1或者HTTP/1.0，200就是它的状态码，OK则为它的描述。</h4><p>//常见状态码：<br>100<del>199：表示成功接收请求，要求客户端继续提交下一次请求才能完成整个处理过程。<br>200</del>299：表示成功接收请求并已完成整个处理过程。常用200<br>300<del>399：为完成请求，客户需进一步细化请求。例如：请求的资源已经移动一个新地址、常用302(意味着你请求我，我让你去找别人),307和304(我不给你这个资源，自己拿缓存)<br>400</del>499：客户端的请求有错误，常用404(意味着你请求的资源在web服务器中没有)403(服务器拒绝访问，权限不够)<br>500~599：服务器端出现错误，常用500<br>更详细的状态码信息</p>
+<h3 id="2-响应头"><a href="#2-响应头" class="headerlink" title="2.响应头"></a>2.响应头</h3><p>响应头用于描述服务器的基本信息，以及数据的描述，服务器通过这些数据的描述信息，可以通知客户端如何处理等一会儿它回送的数据。<br>设置HTTP响应头往往和状态码结合起来。例如，有好几个表示“文档位置已经改变”的状态代码都伴随着一个Location头，而401(Unauthorized)状态代码则必须伴随一个WWW-Authenticate头。然而，即使在没有设置特殊含义的状态代码时，指定应答头也是很有用的。应答头可以用来完成：设置Cookie，指定修改日期，指示浏览器按照指定的间隔刷新页面，声明文档的长度以便利用持久HTTP连接，……等等许多其他任务。<br>常见的响应头字段含义：<br>Allow：服务器支持哪些请求方法(如GET、POST等)。<br>Content-Encoding：文档的编码(Encode)方法。只有在解码之后才可以得到Content-Type头指定的内容类型。利用gzip压缩文档能够显著地减少HTML文档的下载时间。Java的GZIPOutputStream可以很方便地进行gzip压缩，但只有Unix上的Netscape和Windows上的IE4、IE5才支持它。因此，Servlet应该通过查看Accept-Encoding头(即request.getHeader(“Accept- Encoding”))检查浏览器是否支持gzip，为支持gzip的浏览器返回经gzip压缩的HTML页面，为其他浏览器返回普通页面。<br>Content-Length：表示内容长度。只有当浏览器使用持久HTTP连接时才需要这个数据。如果你想要利用持久连接的优势，可以把输出文档写入 ByteArrayOutputStram，完成后查看其大小，然后把该值放入Content-Length头，最后通过byteArrayStream.writeTo(response.getOutputStream()发送内容。</p>
+<h4 id="Content-Type：表示后面的文档属于什么MIME类型。Servlet默认为text-plain，但通常需要显式地指定为text-html。由于经常要设置-Content-Type，因此HttpServletResponse提供了一个专用的方法setContentType。"><a href="#Content-Type：表示后面的文档属于什么MIME类型。Servlet默认为text-plain，但通常需要显式地指定为text-html。由于经常要设置-Content-Type，因此HttpServletResponse提供了一个专用的方法setContentType。" class="headerlink" title="Content- Type：表示后面的文档属于什么MIME类型。Servlet默认为text/plain，但通常需要显式地指定为text/html。由于经常要设置 Content-Type，因此HttpServletResponse提供了一个专用的方法setContentType。"></a>Content- Type：表示后面的文档属于什么MIME类型。Servlet默认为text/plain，但通常需要显式地指定为text/html。由于经常要设置 Content-Type，因此HttpServletResponse提供了一个专用的方法setContentType。</h4><h4 id="Date：当前的GMT时间，例如，Date-Mon-31Dec200104-25-57GMT。Date描述的时间表示世界标准时，换算成本地时间，需要知道用户所在的时区。你可以用setDateHeader来设置这个头以避免转换时间格式的麻烦。"><a href="#Date：当前的GMT时间，例如，Date-Mon-31Dec200104-25-57GMT。Date描述的时间表示世界标准时，换算成本地时间，需要知道用户所在的时区。你可以用setDateHeader来设置这个头以避免转换时间格式的麻烦。" class="headerlink" title="Date：当前的GMT时间，例如，Date:Mon,31Dec200104:25:57GMT。Date描述的时间表示世界标准时，换算成本地时间，需要知道用户所在的时区。你可以用setDateHeader来设置这个头以避免转换时间格式的麻烦。"></a>Date：当前的GMT时间，例如，Date:Mon,31Dec200104:25:57GMT。Date描述的时间表示世界标准时，换算成本地时间，需要知道用户所在的时区。你可以用setDateHeader来设置这个头以避免转换时间格式的麻烦。</h4><h4 id="Expires：告诉浏览器把回送的资源缓存多长时间，-1或0则是不缓存。"><a href="#Expires：告诉浏览器把回送的资源缓存多长时间，-1或0则是不缓存。" class="headerlink" title="Expires：告诉浏览器把回送的资源缓存多长时间，-1或0则是不缓存。"></a>Expires：告诉浏览器把回送的资源缓存多长时间，-1或0则是不缓存。</h4><p>Last-Modified：文档的最后改动时间。客户可以通过If-Modified-Since请求头提供一个日期，该请求将被视为一个条件GET，只有改动时间迟于指定时间的文档才会返回，否则返回一个304(Not Modified)状态。Last-Modified也可用setDateHeader方法来设置。<br>Location：这个头配合302状态码使用，用于重定向接收者到一个新URI地址。表示客户应当到哪里去提取文档。Location通常不是直接设置的，而是通过HttpServletResponse的sendRedirect方法，该方法同时设置状态代码为302。<br>Refresh：告诉浏览器隔多久刷新一次，以秒计。<br>Server：服务器通过这个头告诉浏览器服务器的类型。Server响应头包含处理请求的原始服务器的软件信息。此域能包含多个产品标识和注释，产品标识一般按照重要性排序。Servlet一般不设置这个值，而是由Web服务器自己设置。<br>Set-Cookie：设置和页面关联的Cookie。Servlet不应使用response.setHeader(“Set-Cookie”, …)，而是应使用HttpServletResponse提供的专用方法addCookie。<br>Transfer-Encoding：告诉浏览器数据的传送格式。<br>WWW-Authenticate：客户应该在Authorization头中提供什么类型的授权信息?在包含401(Unauthorized)状态行的应答中这个头是必需的。例如，response.setHeader(“WWW-Authenticate”, “BASIC realm=”executives”“)。注意Servlet一般不进行这方面的处理，而是让Web服务器的专门机制来控制受密码保护页面的访问。<br>注：设置应答头最常用的方法是HttpServletResponse的setHeader，该方法有两个参数，分别表示应答头的名字和值。和设置状态代码相似，设置应答头应该在发送任何文档内容之前进行。<br>setDateHeader方法和setIntHeadr方法专门用来设置包含日期和整数值的应答头，前者避免了把Java时间转换为GMT时间字符串的麻烦，后者则避免了把整数转换为字符串的麻烦。<br>HttpServletResponse还提供了许多设置<br>setContentType：设置Content-Type头。大多数Servlet都要用到这个方法。<br>setContentLength：设置Content-Length头。对于支持持久HTTP连接的浏览器来说，这个函数是很有用的。<br>addCookie：设置一个Cookie(Servlet API中没有setCookie方法，因为应答往往包含多个Set-Cookie头)。</p>
+<h3 id="3-响应体"><a href="#3-响应体" class="headerlink" title="3.响应体"></a>3.响应体</h3><p>响应体就是响应的消息体，如果是纯数据就是返回纯数据，如果请求的是HTML页面，那么返回的就是HTML代码，如果是JS就是JS代码，如此之类。<br>HTTP响应报文格式就如下图所示</p>
+<p>通用头、实体头<br>HTTP的头域包括通用头，请求头，响应头和实体头四个部分。前面讲解了请求头和响应头，接下来看看通用头和实体头(这里可能和前面介绍的请求头、响应头有重复)。<br>(1)通用头域<br>通用头域包含请求和响应消息都支持的头域，通用头域包含Cache-Control、 Connection、Date、Pragma、Transfer-Encoding、Upgrade、Via。对通用头域的扩展要求通讯双方都支持此扩展，如果存在不支持的通用头域，一般将会作为实体头域处理。下面简单介绍几个通用头域。<br>常见通用头含义：</p>
+<h4 id="Cache-Control：指定请求和响应遵循的缓存机制。在请求消息或响应消息中设置-Cache-Control并不会修改另一个消息处理过程中的缓存处理过程。请求时的缓存指令包括no-cache、no-store、max-age、-max-stale、min-fresh、only-if-cached，响应消息中的指令包括public、private、no-cache、no-store、no-transform、must-revalidate、proxy-revalidate、max-age。各个消息中的指令含义如下："><a href="#Cache-Control：指定请求和响应遵循的缓存机制。在请求消息或响应消息中设置-Cache-Control并不会修改另一个消息处理过程中的缓存处理过程。请求时的缓存指令包括no-cache、no-store、max-age、-max-stale、min-fresh、only-if-cached，响应消息中的指令包括public、private、no-cache、no-store、no-transform、must-revalidate、proxy-revalidate、max-age。各个消息中的指令含义如下：" class="headerlink" title="Cache-Control：指定请求和响应遵循的缓存机制。在请求消息或响应消息中设置 Cache-Control并不会修改另一个消息处理过程中的缓存处理过程。请求时的缓存指令包括no-cache、no-store、max-age、 max-stale、min-fresh、only-if-cached，响应消息中的指令包括public、private、no-cache、no- store、no-transform、must-revalidate、proxy-revalidate、max-age。各个消息中的指令含义如下："></a>Cache-Control：指定请求和响应遵循的缓存机制。在请求消息或响应消息中设置 Cache-Control并不会修改另一个消息处理过程中的缓存处理过程。请求时的缓存指令包括no-cache、no-store、max-age、 max-stale、min-fresh、only-if-cached，响应消息中的指令包括public、private、no-cache、no- store、no-transform、must-revalidate、proxy-revalidate、max-age。各个消息中的指令含义如下：</h4><p>Public指示响应可被任何缓存区缓存。 Private指示对于单个用户的整个或部分响应消息，不能被共享缓存处理。这允许服务器仅仅描述当用户的部分响应消息，此响应消息对于其他用户的请求无效。 no-cache指示请求或响应消息不能缓存 no-store用于防止重要的信息被无意的发布。在请求消息中发送将使得请求和响应消息都不使用缓存。 max-age指示客户机可以接收生存期不大于指定时间(以秒为单位)的响应。 min-fresh指示客户机可以接收响应时间小于当前时间加上指定时间的响应。 max-stale指示客户机可以接收超出超时期间的响应消息。如果指定max-stale消息的值，那么客户机可以接收超出超时期指定值之内的响应消息。<br>Date：表示消息发送的时间，时间的描述格式由rfc822定义。例如，Date:Mon,31Dec200104:25:57GMT。Date描述的时间表示世界标准时，换算成本地时间，需要知道用户所在的时区。<br>Pragma：用来包含实现特定的指令，最常用的是Pragma:no-cache。在HTTP/1.1协议中，它的含义和Cache-Control:no-cache相同。<br>(2)实体头域<br>请求消息和响应消息都可以包含实体信息，实体信息一般由实体头域和实体组成。实体头域包含关于实体的原信息，实体头包括Allow、Content- Base、Content-Encoding、Content-Language、 Content-Length、Content-Location、Content-MD5、Content-Range、Content-Type、 Etag、Expires、Last-Modified、extension-header。extension-header允许客户端定义新的实体头，但是这些域可能无法未接受方识别。实体可以是一个经过编码的字节流，它的编码方式由Content-Encoding或Content-Type定义，它的长度由Content-Length或Content-Range定义。<br>常见实体头含义：<br>Content-Encoding： 服务器通过这个头告诉浏览器数据的压缩格式。<br>Content-Length： 服务器通过这个头告诉浏览器回送数据的长度。<br>Content-Disposition：告诉浏览器以下载方式打开数据。</p>
+<h4 id="Content-Type：服务器通过这个头告诉浏览器回送数据的类型。Content-Type实体头用于向接收方指示实体的介质类型，指定HEAD方法送到接收方的实体介质类型，或GET方法发送的请求介质类型。"><a href="#Content-Type：服务器通过这个头告诉浏览器回送数据的类型。Content-Type实体头用于向接收方指示实体的介质类型，指定HEAD方法送到接收方的实体介质类型，或GET方法发送的请求介质类型。" class="headerlink" title="Content-Type：服务器通过这个头告诉浏览器回送数据的类型。Content-Type实体头用于向接收方指示实体的介质类型，指定HEAD方法送到接收方的实体介质类型，或GET方法发送的请求介质类型。"></a>Content-Type：服务器通过这个头告诉浏览器回送数据的类型。Content-Type实体头用于向接收方指示实体的介质类型，指定HEAD方法送到接收方的实体介质类型，或GET方法发送的请求介质类型。</h4><p>Content-Range：用于指定整个实体中的一部分的插入位置，他也指示了整个实体的长度。在服务器向客户返回一个部分响应，它必须描述响应覆盖的范围和整个实体长度。一般格式：<br>Content-Range:bytes-unitSPfirst-byte-pos-last-byte-pos/entity-legth<br>例如，传送头500个字节次字段的形式：Content-Range:bytes0- 499/1234，如果一个http消息包含此节(例如，对范围请求的响应或对一系列范围的重叠请求)，Content-Range表示传送的范围， Content-Length表示实际传送的字节数。<br>Last-Modified：指定服务器上保存内容的最后修订时间。</p>
+<h4 id="ETag：缓存相关的头"><a href="#ETag：缓存相关的头" class="headerlink" title="ETag：缓存相关的头"></a>ETag：缓存相关的头</h4><h4 id="Expires：告诉浏览器把回送的资源缓存多长时间-1或0则是不缓存"><a href="#Expires：告诉浏览器把回送的资源缓存多长时间-1或0则是不缓存" class="headerlink" title="Expires：告诉浏览器把回送的资源缓存多长时间 -1或0则是不缓存"></a>Expires：告诉浏览器把回送的资源缓存多长时间 -1或0则是不缓存</h4><p>其中三种禁止浏览器缓存的头字段：<br>Expires：-1或0<br>Cache-Control：no-cache<br>Pragma：no-cache<br>GET、POST区别<br>Http定义了与服务器交互的不同方法，最基本的方法有4种：GET、POST、PUT、DELETE。<br>而HTTP中的 GET，POST，PUT，DELETE 就对应着对URL资源的 查，改，增，删 4个操作。所以说：GET一般用于获取/查询资源信息，而POST一般用于更新资源信息。<br>主要区分一下get和post<br>1.提交数据的形式：<br>GET请求的数据会附在URL之后(就是把数据放置在HTTP协议头中)，会直接展现在地址栏中，以?分割URL和传输数据，参数之间以&amp;相连，如：login.action?name=hyddd&amp;password=idontknow&amp;verify=%E4%BD%A0%E5 %A5%BD。<br>如果数据是英文字母/数字，原样发送，如果是空格，转换为+，如果是中文/其他字符，则直接把字符串用BASE64加密，<br>得出如：%E4 %BD%A0%E5%A5%BD，其中%XX中的XX为该符号以16进制表示的ASCII。<br>而POST方法则会把数据放到请求数据字段中以&amp;分隔各个字段，请求行不包含数据参数，地址栏也不会额外附带参数<br>2.提交数据的大小<br>get方法提交数据的大小直接影响到了URL的长度，但HTTP协议规范中其实是没有对URL限制长度的，限制URL长度的是客户端或服务器的支持的不同所影响：比如IE对URL长度的限制是2083字节(2K+35)。对于其他浏览器，如Netscape、FireFox等，理论上没有长度限制，其限制取决于操作系统的支持。<br>post方式HTTP协议规范中也没有限定，起限制作用的是服务器的处理程序的处理能力。<br>所以大小的限制还是得受各个web服务器配置的不同而影响。<br>3.提交数据的安全<br>POST比GET方式的安全性要高<br>通过GET提交数据，用户名和密码将明文出现在URL上，因为一下几个原因get方式安全性会比post弱：<br>(1)登录页面有可能被浏览器缓存<br>(2)其他人查看浏览器的历史纪录，那么别人就可 以拿到你的账号和密码了<br>(3)当遇上跨站的攻击时，安全性的表现更差了<br>————————————————<br>版权声明：本文为CSDN博主「Good Inflation」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_29669143/article/details/112410252">https://blog.csdn.net/weixin_29669143/article/details/112410252</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2022/03/30/HTTP_%E6%8A%A5%E6%96%87%E5%8D%8F%E8%AE%AE%E4%BD%93/">HTTP_报文体</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage"></a></p>
+        <p><span>Created:</span>2022-03-30, 20:44:05</p>
+        <p><span>Updated:</span>2022-03-30, 20:57:10</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2022/03/30/HTTP_%E6%8A%A5%E6%96%87%E5%8D%8F%E8%AE%AE%E4%BD%93/" title="HTTP_报文体">http://example.com/2022/03/30/HTTP_%E6%8A%A5%E6%96%87%E5%8D%8F%E8%AE%AE%E4%BD%93/</a>
+            <span class="copy-path" data-clipboard-text="From http://example.com/2022/03/30/HTTP_%E6%8A%A5%E6%96%87%E5%8D%8F%E8%AE%AE%E4%BD%93/　　By " title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2022/03/30/VUE_$router%E5%92%8C$route/">
+                    VUE_$router和$route
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2022/03/30/JS_Promise/">
+                    JS_Promise
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87"><span class="toc-number">1.</span> <span class="toc-text">HTTP请求报文</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E8%A1%8C%E7%94%B1%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%E5%AD%97%E6%AE%B5%E3%80%81URL%E5%AD%97%E6%AE%B5%E5%92%8CHTTP%E5%8D%8F%E8%AE%AE%E7%89%88%E6%9C%AC%E5%AD%97%E6%AE%B53%E4%B8%AA%E5%AD%97%E6%AE%B5%E7%BB%84%E6%88%90%EF%BC%8C%E5%AE%83%E4%BB%AC%E7%94%A8%E7%A9%BA%E6%A0%BC%E5%88%86%E9%9A%94%E3%80%82%E6%AF%94%E5%A6%82-GET-data-info-html-HTTP-1-1"><span class="toc-number">1.0.1.</span> <span class="toc-text">请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔。比如 GET &#x2F;data&#x2F;info.html HTTP&#x2F;1.1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E5%AD%97%E6%AE%B5%E5%B0%B1%E6%98%AFHTTP%E4%BD%BF%E7%94%A8%E7%9A%84%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%EF%BC%8C%E6%AF%94%E5%A6%82%E5%B8%B8%E8%A7%81%E7%9A%84GET-POST"><span class="toc-number">1.0.2.</span> <span class="toc-text">方法字段就是HTTP使用的请求方法，比如常见的GET&#x2F;POST</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%B8%ADHTTP%E5%8D%8F%E8%AE%AE%E7%89%88%E6%9C%AC%E6%9C%89%E4%B8%A4%E7%A7%8D%EF%BC%9AHTTP1-0-HTTP1-1-%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-number">1.0.3.</span> <span class="toc-text">其中HTTP协议版本有两种：HTTP1.0&#x2F;HTTP1.1 可以这样区别：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP1-0%E5%AF%B9%E4%BA%8E%E6%AF%8F%E4%B8%AA%E8%BF%9E%E6%8E%A5%E9%83%BD%E5%8F%AA%E8%83%BD%E4%BC%A0%E9%80%81%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%EF%BC%8C%E8%AF%B7%E6%B1%82%E5%B0%B1%E4%BC%9A%E5%85%B3%E9%97%AD%EF%BC%8CHTTP1-0%E6%B2%A1%E6%9C%89Host%E5%AD%97%E6%AE%B5-%E8%80%8CHTTP1-1%E5%9C%A8%E5%90%8C%E4%B8%80%E4%B8%AA%E8%BF%9E%E6%8E%A5%E4%B8%AD%E5%8F%AF%E4%BB%A5%E4%BC%A0%E9%80%81%E5%A4%9A%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%EF%BC%8C%E5%A4%9A%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%8F%AF%E4%BB%A5%E9%87%8D%E5%8F%A0%E5%92%8C%E5%90%8C%E6%97%B6%E8%BF%9B%E8%A1%8C%EF%BC%8CHTTP1-1%E5%BF%85%E9%A1%BB%E6%9C%89Host%E5%AD%97%E6%AE%B5%E3%80%82"><span class="toc-number">1.0.4.</span> <span class="toc-text">HTTP1.0对于每个连接都只能传送一个请求和响应，请求就会关闭，HTTP1.0没有Host字段;而HTTP1.1在同一个连接中可以传送多个请求和响应，多个请求可以重叠和同时进行，HTTP1.1必须有Host字段。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Content-Length%EF%BC%9A%E8%A1%A8%E7%A4%BA%E8%AF%B7%E6%B1%82%E6%B6%88%E6%81%AF%E6%AD%A3%E6%96%87%E7%9A%84%E9%95%BF%E5%BA%A6%E3%80%82"><span class="toc-number">1.0.5.</span> <span class="toc-text">Content-Length：表示请求消息正文的长度。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Host%EF%BC%9A-%E5%AE%A2%E6%88%B7%E6%9C%BA%E9%80%9A%E8%BF%87%E8%BF%99%E4%B8%AA%E5%A4%B4%E5%91%8A%E8%AF%89%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E6%83%B3%E8%AE%BF%E9%97%AE%E7%9A%84%E4%B8%BB%E6%9C%BA%E5%90%8D%E3%80%82Host%E5%A4%B4%E5%9F%9F%E6%8C%87%E5%AE%9A%E8%AF%B7%E6%B1%82%E8%B5%84%E6%BA%90%E7%9A%84Intenet%E4%B8%BB%E6%9C%BA%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7%EF%BC%8C%E5%BF%85%E9%A1%BB%E8%A1%A8%E7%A4%BA%E8%AF%B7%E6%B1%82url%E7%9A%84%E5%8E%9F%E5%A7%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%88%96%E7%BD%91%E5%85%B3%E7%9A%84%E4%BD%8D%E7%BD%AE%E3%80%82HTTP-1-1%E8%AF%B7%E6%B1%82%E5%BF%85%E9%A1%BB%E5%8C%85%E5%90%AB%E4%B8%BB%E6%9C%BA%E5%A4%B4%E5%9F%9F%EF%BC%8C%E5%90%A6%E5%88%99%E7%B3%BB%E7%BB%9F%E4%BC%9A%E4%BB%A5400%E7%8A%B6%E6%80%81%E7%A0%81%E8%BF%94%E5%9B%9E%E3%80%82"><span class="toc-number">1.0.6.</span> <span class="toc-text">Host： 客户机通过这个头告诉服务器，想访问的主机名。Host头域指定请求资源的Intenet主机和端口号，必须表示请求url的原始服务器或网关的位置。HTTP&#x2F;1.1请求必须包含主机头域，否则系统会以400状态码返回。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cookie%EF%BC%9A%E5%AE%A2%E6%88%B7%E6%9C%BA%E9%80%9A%E8%BF%87%E8%BF%99%E4%B8%AA%E5%A4%B4%E5%8F%AF%E4%BB%A5%E5%90%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B8%A6%E6%95%B0%E6%8D%AE%EF%BC%8C%E8%BF%99%E6%98%AF%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E8%AF%B7%E6%B1%82%E5%A4%B4%E4%BF%A1%E6%81%AF%E4%B9%8B%E4%B8%80%E3%80%82"><span class="toc-number">1.0.7.</span> <span class="toc-text">Cookie：客户机通过这个头可以向服务器带数据，这是最重要的请求头信息之一。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Connection%EF%BC%9A%E5%A4%84%E7%90%86%E5%AE%8C%E8%BF%99%E6%AC%A1%E8%AF%B7%E6%B1%82%E5%90%8E%E6%98%AF%E5%90%A6%E6%96%AD%E5%BC%80%E8%BF%9E%E6%8E%A5%E8%BF%98%E6%98%AF%E7%BB%A7%E7%BB%AD%E4%BF%9D%E6%8C%81%E8%BF%9E%E6%8E%A5%E3%80%82%E5%A6%82%E6%9E%9CServlet%E7%9C%8B%E5%88%B0%E8%BF%99%E9%87%8C%E7%9A%84%E5%80%BC%E4%B8%BA%E2%80%9CKeep-Alive%E2%80%9D%EF%BC%8C%E6%88%96%E8%80%85%E7%9C%8B%E5%88%B0%E8%AF%B7%E6%B1%82%E4%BD%BF%E7%94%A8%E7%9A%84%E6%98%AFHTTP-1-1-HTTP-1-1%E9%BB%98%E8%AE%A4%E8%BF%9B%E8%A1%8C%E6%8C%81%E4%B9%85%E8%BF%9E%E6%8E%A5-%EF%BC%8C%E5%AE%83%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%88%A9%E7%94%A8%E6%8C%81%E4%B9%85%E8%BF%9E%E6%8E%A5%E7%9A%84%E4%BC%98%E7%82%B9%EF%BC%8C%E5%BD%93%E9%A1%B5%E9%9D%A2%E5%8C%85%E5%90%AB%E5%A4%9A%E4%B8%AA%E5%85%83%E7%B4%A0%E6%97%B6-%E4%BE%8B%E5%A6%82Applet%EF%BC%8C%E5%9B%BE%E7%89%87-%EF%BC%8C%E6%98%BE%E8%91%97%E5%9C%B0%E5%87%8F%E5%B0%91%E4%B8%8B%E8%BD%BD%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%97%B6%E9%97%B4%E3%80%82%E8%A6%81%E5%AE%9E%E7%8E%B0%E8%BF%99%E4%B8%80%E7%82%B9%EF%BC%8CServlet%E9%9C%80%E8%A6%81%E5%9C%A8%E5%BA%94%E7%AD%94%E4%B8%AD%E5%8F%91%E9%80%81%E4%B8%80%E4%B8%AAContent-Length%E5%A4%B4%EF%BC%8C%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95%E6%98%AF%EF%BC%9A%E5%85%88%E6%8A%8A%E5%86%85%E5%AE%B9%E5%86%99%E5%85%A5-ByteArrayOutputStream%EF%BC%8C%E7%84%B6%E5%90%8E%E5%9C%A8%E6%AD%A3%E5%BC%8F%E5%86%99%E5%87%BA%E5%86%85%E5%AE%B9%E4%B9%8B%E5%89%8D%E8%AE%A1%E7%AE%97%E5%AE%83%E7%9A%84%E5%A4%A7%E5%B0%8F%E3%80%82"><span class="toc-number">1.0.8.</span> <span class="toc-text">Connection：处理完这次请求后是否断开连接还是继续保持连接。如果Servlet看到这里的值为“Keep- Alive”，或者看到请求使用的是HTTP 1.1(HTTP 1.1默认进行持久连接)，它就可以利用持久连接的优点，当页面包含多个元素时(例如Applet，图片)，显著地减少下载所需要的时间。要实现这一点，Servlet需要在应答中发送一个Content-Length头，最简单的实现方法是：先把内容写入 ByteArrayOutputStream，然后在正式写出内容之前计算它的大小。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87"><span class="toc-number">2.</span> <span class="toc-text">HTTP响应报文</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E6%A0%B7%E7%9A%84%EF%BC%8CHTTP%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E4%B9%9F%E7%94%B1%E4%B8%89%E9%83%A8%E5%88%86%E7%BB%84%E6%88%90%EF%BC%9A%E5%93%8D%E5%BA%94%E8%A1%8C%E3%80%81%E5%93%8D%E5%BA%94%E5%A4%B4%E3%80%81%E5%93%8D%E5%BA%94%E4%BD%93"><span class="toc-number">2.0.1.</span> <span class="toc-text">同样的，HTTP响应报文也由三部分组成：响应行、响应头、响应体</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%93%8D%E5%BA%94%E8%A1%8C"><span class="toc-number">2.1.</span> <span class="toc-text">1.响应行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E8%A1%8C%E4%B8%80%E8%88%AC%E7%94%B1%E5%8D%8F%E8%AE%AE%E7%89%88%E6%9C%AC%E3%80%81%E7%8A%B6%E6%80%81%E7%A0%81%E5%8F%8A%E5%85%B6%E6%8F%8F%E8%BF%B0%E7%BB%84%E6%88%90-%E6%AF%94%E5%A6%82-HTTP-1-1-200-OK"><span class="toc-number">2.1.1.</span> <span class="toc-text">响应行一般由协议版本、状态码及其描述组成 比如 HTTP&#x2F;1.1 200 OK</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%B8%AD%E5%8D%8F%E8%AE%AE%E7%89%88%E6%9C%ACHTTP-1-1%E6%88%96%E8%80%85HTTP-1-0%EF%BC%8C200%E5%B0%B1%E6%98%AF%E5%AE%83%E7%9A%84%E7%8A%B6%E6%80%81%E7%A0%81%EF%BC%8COK%E5%88%99%E4%B8%BA%E5%AE%83%E7%9A%84%E6%8F%8F%E8%BF%B0%E3%80%82"><span class="toc-number">2.1.2.</span> <span class="toc-text">其中协议版本HTTP&#x2F;1.1或者HTTP&#x2F;1.0，200就是它的状态码，OK则为它的描述。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%93%8D%E5%BA%94%E5%A4%B4"><span class="toc-number">2.2.</span> <span class="toc-text">2.响应头</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Content-Type%EF%BC%9A%E8%A1%A8%E7%A4%BA%E5%90%8E%E9%9D%A2%E7%9A%84%E6%96%87%E6%A1%A3%E5%B1%9E%E4%BA%8E%E4%BB%80%E4%B9%88MIME%E7%B1%BB%E5%9E%8B%E3%80%82Servlet%E9%BB%98%E8%AE%A4%E4%B8%BAtext-plain%EF%BC%8C%E4%BD%86%E9%80%9A%E5%B8%B8%E9%9C%80%E8%A6%81%E6%98%BE%E5%BC%8F%E5%9C%B0%E6%8C%87%E5%AE%9A%E4%B8%BAtext-html%E3%80%82%E7%94%B1%E4%BA%8E%E7%BB%8F%E5%B8%B8%E8%A6%81%E8%AE%BE%E7%BD%AE-Content-Type%EF%BC%8C%E5%9B%A0%E6%AD%A4HttpServletResponse%E6%8F%90%E4%BE%9B%E4%BA%86%E4%B8%80%E4%B8%AA%E4%B8%93%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95setContentType%E3%80%82"><span class="toc-number">2.2.1.</span> <span class="toc-text">Content- Type：表示后面的文档属于什么MIME类型。Servlet默认为text&#x2F;plain，但通常需要显式地指定为text&#x2F;html。由于经常要设置 Content-Type，因此HttpServletResponse提供了一个专用的方法setContentType。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Date%EF%BC%9A%E5%BD%93%E5%89%8D%E7%9A%84GMT%E6%97%B6%E9%97%B4%EF%BC%8C%E4%BE%8B%E5%A6%82%EF%BC%8CDate-Mon-31Dec200104-25-57GMT%E3%80%82Date%E6%8F%8F%E8%BF%B0%E7%9A%84%E6%97%B6%E9%97%B4%E8%A1%A8%E7%A4%BA%E4%B8%96%E7%95%8C%E6%A0%87%E5%87%86%E6%97%B6%EF%BC%8C%E6%8D%A2%E7%AE%97%E6%88%90%E6%9C%AC%E5%9C%B0%E6%97%B6%E9%97%B4%EF%BC%8C%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%94%A8%E6%88%B7%E6%89%80%E5%9C%A8%E7%9A%84%E6%97%B6%E5%8C%BA%E3%80%82%E4%BD%A0%E5%8F%AF%E4%BB%A5%E7%94%A8setDateHeader%E6%9D%A5%E8%AE%BE%E7%BD%AE%E8%BF%99%E4%B8%AA%E5%A4%B4%E4%BB%A5%E9%81%BF%E5%85%8D%E8%BD%AC%E6%8D%A2%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E7%9A%84%E9%BA%BB%E7%83%A6%E3%80%82"><span class="toc-number">2.2.2.</span> <span class="toc-text">Date：当前的GMT时间，例如，Date:Mon,31Dec200104:25:57GMT。Date描述的时间表示世界标准时，换算成本地时间，需要知道用户所在的时区。你可以用setDateHeader来设置这个头以避免转换时间格式的麻烦。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Expires%EF%BC%9A%E5%91%8A%E8%AF%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8A%8A%E5%9B%9E%E9%80%81%E7%9A%84%E8%B5%84%E6%BA%90%E7%BC%93%E5%AD%98%E5%A4%9A%E9%95%BF%E6%97%B6%E9%97%B4%EF%BC%8C-1%E6%88%960%E5%88%99%E6%98%AF%E4%B8%8D%E7%BC%93%E5%AD%98%E3%80%82"><span class="toc-number">2.2.3.</span> <span class="toc-text">Expires：告诉浏览器把回送的资源缓存多长时间，-1或0则是不缓存。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%93%8D%E5%BA%94%E4%BD%93"><span class="toc-number">2.3.</span> <span class="toc-text">3.响应体</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Cache-Control%EF%BC%9A%E6%8C%87%E5%AE%9A%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E9%81%B5%E5%BE%AA%E7%9A%84%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6%E3%80%82%E5%9C%A8%E8%AF%B7%E6%B1%82%E6%B6%88%E6%81%AF%E6%88%96%E5%93%8D%E5%BA%94%E6%B6%88%E6%81%AF%E4%B8%AD%E8%AE%BE%E7%BD%AE-Cache-Control%E5%B9%B6%E4%B8%8D%E4%BC%9A%E4%BF%AE%E6%94%B9%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%B6%88%E6%81%AF%E5%A4%84%E7%90%86%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%BC%93%E5%AD%98%E5%A4%84%E7%90%86%E8%BF%87%E7%A8%8B%E3%80%82%E8%AF%B7%E6%B1%82%E6%97%B6%E7%9A%84%E7%BC%93%E5%AD%98%E6%8C%87%E4%BB%A4%E5%8C%85%E6%8B%ACno-cache%E3%80%81no-store%E3%80%81max-age%E3%80%81-max-stale%E3%80%81min-fresh%E3%80%81only-if-cached%EF%BC%8C%E5%93%8D%E5%BA%94%E6%B6%88%E6%81%AF%E4%B8%AD%E7%9A%84%E6%8C%87%E4%BB%A4%E5%8C%85%E6%8B%ACpublic%E3%80%81private%E3%80%81no-cache%E3%80%81no-store%E3%80%81no-transform%E3%80%81must-revalidate%E3%80%81proxy-revalidate%E3%80%81max-age%E3%80%82%E5%90%84%E4%B8%AA%E6%B6%88%E6%81%AF%E4%B8%AD%E7%9A%84%E6%8C%87%E4%BB%A4%E5%90%AB%E4%B9%89%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-number">2.3.1.</span> <span class="toc-text">Cache-Control：指定请求和响应遵循的缓存机制。在请求消息或响应消息中设置 Cache-Control并不会修改另一个消息处理过程中的缓存处理过程。请求时的缓存指令包括no-cache、no-store、max-age、 max-stale、min-fresh、only-if-cached，响应消息中的指令包括public、private、no-cache、no- store、no-transform、must-revalidate、proxy-revalidate、max-age。各个消息中的指令含义如下：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Content-Type%EF%BC%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E8%BF%87%E8%BF%99%E4%B8%AA%E5%A4%B4%E5%91%8A%E8%AF%89%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9B%9E%E9%80%81%E6%95%B0%E6%8D%AE%E7%9A%84%E7%B1%BB%E5%9E%8B%E3%80%82Content-Type%E5%AE%9E%E4%BD%93%E5%A4%B4%E7%94%A8%E4%BA%8E%E5%90%91%E6%8E%A5%E6%94%B6%E6%96%B9%E6%8C%87%E7%A4%BA%E5%AE%9E%E4%BD%93%E7%9A%84%E4%BB%8B%E8%B4%A8%E7%B1%BB%E5%9E%8B%EF%BC%8C%E6%8C%87%E5%AE%9AHEAD%E6%96%B9%E6%B3%95%E9%80%81%E5%88%B0%E6%8E%A5%E6%94%B6%E6%96%B9%E7%9A%84%E5%AE%9E%E4%BD%93%E4%BB%8B%E8%B4%A8%E7%B1%BB%E5%9E%8B%EF%BC%8C%E6%88%96GET%E6%96%B9%E6%B3%95%E5%8F%91%E9%80%81%E7%9A%84%E8%AF%B7%E6%B1%82%E4%BB%8B%E8%B4%A8%E7%B1%BB%E5%9E%8B%E3%80%82"><span class="toc-number">2.3.2.</span> <span class="toc-text">Content-Type：服务器通过这个头告诉浏览器回送数据的类型。Content-Type实体头用于向接收方指示实体的介质类型，指定HEAD方法送到接收方的实体介质类型，或GET方法发送的请求介质类型。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ETag%EF%BC%9A%E7%BC%93%E5%AD%98%E7%9B%B8%E5%85%B3%E7%9A%84%E5%A4%B4"><span class="toc-number">2.3.3.</span> <span class="toc-text">ETag：缓存相关的头</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Expires%EF%BC%9A%E5%91%8A%E8%AF%89%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8A%8A%E5%9B%9E%E9%80%81%E7%9A%84%E8%B5%84%E6%BA%90%E7%BC%93%E5%AD%98%E5%A4%9A%E9%95%BF%E6%97%B6%E9%97%B4-1%E6%88%960%E5%88%99%E6%98%AF%E4%B8%8D%E7%BC%93%E5%AD%98"><span class="toc-number">2.3.4.</span> <span class="toc-text">Expires：告诉浏览器把回送的资源缓存多长时间 -1或0则是不缓存</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"HTTP_报文体　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2022/03/30/VUE_$router%E5%92%8C$route/" title="Pre: VUE_$router和$route">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2022/03/30/JS_Promise/" title="Next: JS_Promise">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/04/11/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%8F%8D%E9%97%AE/">前端面试反问</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/04/09/VUE_%E5%89%8D%E7%AB%AF%E6%9D%83%E9%99%90%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/">VUE_前端权限开发</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/04/08/VUE_router%E5%AE%88%E5%8D%AB/">VUE_router守卫</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/04/08/VUE_%E6%9D%83%E9%99%90%E5%BC%80%E5%8F%91/">VUE_权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/04/08/CSS_%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E5%92%8C%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80/">CSS_圣杯布局和双飞翼布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/04/08/VUE_Vuex/">Vue_Vuex</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/30/VUE_$router%E5%92%8C$route/">VUE_$router和$route</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/30/HTTP_%E6%8A%A5%E6%96%87%E5%8D%8F%E8%AE%AE%E4%BD%93/">HTTP_报文体</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/30/JS_Promise/">JS_Promise</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/30/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/">自我介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/30/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">前端性能优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/29/JS_XSS_CRSF/">JS_XSS_CRSF</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/29/CSS_grid/">CSS_grid</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/28/VUE_%E8%B7%AF%E7%94%B1%E6%87%92%E5%8A%A0%E8%BD%BD/">VUE_路由懒加载</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/28/JS_%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">JS_箭头函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/28/CSS_BFC/">CSS_BFC</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/22/HTML_%E5%A4%A7%E7%B1%BB/">HTML_大类</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/22/JS_%E5%A4%A7%E7%B1%BB/">JS_大类</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/22/CSS_%E5%A4%A7%E7%B1%BB/">CSS_大类</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/22/%E6%96%B0%E7%89%B9%E6%80%A7CSS3/">CSS3新特性</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/22/%E6%96%B0%E7%89%B9%E6%80%A7ES6/">ES6的新特性</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/22/%E6%96%B0%E7%89%B9%E6%80%A7H5/">H5的新特性</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/22/VUE_v-if%E5%92%8Cv-show/">VUE_v-if和v-show</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/21/GET%E8%AF%B7%E6%B1%82%E5%92%8CPOST%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8C%BA%E5%88%AB/">GET请求和POST请求的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/21/JS_%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/">JS_数组去重</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/21/CSS_%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%96%B9%E6%B3%95/">CSS_清除浮动</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/21/CSS_%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8C%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/">CSS_行内元素和块级元素</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/21/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/">浏览器内核</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/21/CSS_rem%E4%B8%8Eem/">CSS_rem与em</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/21/CSS_%E5%AE%9E%E7%8E%B0%E4%B8%89%E8%A7%92%E5%BD%A2/">CSS_实现三角形</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/21/HTTP_%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E4%B8%8E%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98/">HTTP_强制缓存与协商缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/18/JS_%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/">JS_防抖节流</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/18/JS_%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">JS_事件循环</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/17/OSI7%E5%B1%82%E6%A8%A1%E5%9E%8B/">OSI7层模型</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/17/JS_%E4%BD%9C%E7%94%A8%E5%9F%9F/">JS_作用域（this）</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/17/JS_call_apply_bind/">JS_call_apply_bind</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/16/JS_for_in_of/">JS_for_in_of</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/16/JS_%E6%95%B0%E6%8D%AE%E4%BB%A3%E7%90%86/">JS_数据代理</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/15/JS_%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/">JS_事件捕获和事件冒泡</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/14/JS_%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1/">JS_原型对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/14/JS_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">垃圾回收</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/14/JS_%E9%80%92%E5%BD%92/">JS_递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/12/CSS_flex/">CSS_flex</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/12/CSS_position/">CSS_position</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/12/CSS_%E5%B1%85%E4%B8%AD/">css居中</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/12/JS_setTimeout/">JS_setTimeout</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/12/JS_typeof_instanceof/">JS_instanceof</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/12/VUE_%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%8F%82/">VUE组件传参</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/10/JS_%E6%B7%B1%E6%8B%B7%E8%B4%9D%E6%B5%85%E6%8B%B7%E8%B4%9D/">深拷贝浅拷贝</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">我的第一篇文章</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/16/JS_%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/">trytitle</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/16/trytitle/">trytitle</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/14/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2022 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
